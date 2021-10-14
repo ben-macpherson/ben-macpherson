@@ -30,7 +30,7 @@ twitter_username: ben_macp
 github_username:  ben-macpherson
 
 # Build settings
-theme: minima
+theme: jekyll-theme-minimal
 plugins:
   - jekyll-feed
 
