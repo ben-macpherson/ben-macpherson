@@ -1,0 +1,11 @@
+body {
+	font-family: 'DM Sans', sans-serif;
+}
+
+.pointer {
+	cursor: pointer !important;
+}
+
+.nav-link {
+	text-transform: uppercase;
+}
