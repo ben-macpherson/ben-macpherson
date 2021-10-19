@@ -6,6 +6,21 @@ body {
 	cursor: pointer !important;
 }
 
-.nav-link {
-	text-transform: uppercase;
+.bm-icon {
+	stroke-width: 1px;
+	height: 30px;
+	width: 30px;
+}
+
+a:hover .bm-icon {
+	color:  var(--bs-primary);
+}
+
+.copyright {
+	font-size: 12px;
+	font-weight: 500;
+}
+
+.btn:focus {
+	box-shadow: none;
 }
