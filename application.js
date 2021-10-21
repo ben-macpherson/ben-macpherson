@@ -1,6 +1,7 @@
 import navbar from '/components/navbar.js';
 import footer from '/components/footer.js';
 import home from '/components/home.js';
+import resume from '/components/resume.js';
 
 $( document ).ready(function() {
   var application = new Vue({

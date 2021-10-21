@@ -24,3 +24,17 @@ a:hover .bm-icon {
 .btn:focus {
 	box-shadow: none;
 }
+
+#navdot {
+	position: fixed;	
+	top: 18px;
+}
+#navdot svg {
+	width: 8px;
+	height: 8px;
+	fill: black;
+}
+
+.navdot-move {
+	transition: transform 1s;
+}
