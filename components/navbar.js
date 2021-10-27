@@ -3,6 +3,14 @@ export default Vue.component('navbar', {
   data: function() {
     return {
       dot_offsets: {home: null, resume: null, blog: null},
+      offsets_calculated: false,
+    }
+  },
+  watch: {
+    dot_left: function(newPostition, oldPosition) {
+      if(oldPosition == null && newPostition != null){
+        feather.replace();
+      }
     }
   },
   methods: {
@@ -32,7 +40,7 @@ export default Vue.component('navbar', {
       window.removeEventListener('resize', this.setOffsets);
   },
   mounted(){
-    setTimeout(function(){ this.setOffsets(); }.bind(this), 250);
+    setTimeout(function(){ this.setOffsets(); }.bind(this), 50);
   },
   template: `
 
@@ -46,22 +54,24 @@ export default Vue.component('navbar', {
     </button>
     <div class="collapse navbar-collapse" id="navbar">
       <transition-group name="navdot">
-        <div id="navdot" class="d-none" :style="{ left: dot_left + 'px' }" :class="{ 'd-md-block' : dot_left }" key="navdot">
-          <i data-feather="circle"></i>
+        <div id="navdot" class="d-none d-md-block" :style="{ left: dot_left + 'px' }" key="navdot" v-if="dot_left"> 
+          <svg viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="50"/>
+          </svg>
         </div>
       </transition-group>
       <ul class="navbar-nav flex-grow-1 justify-content-center align-items-end mb-2 mb-md-0 text-uppercase">
         <li class="nav-item text-center p-md-2">
-          <a class="nav-link active" href="#home" @click="$emit('update:page', 'home')">Home</a>
+          <a class="nav-link" :class="{ 'active' : page == 'home' }" href="#home" @click="$emit('update:page', 'home')">Home</a>
         </li>
         <li class="d-md-none nav-item p-md-2">
-          <a class="nav-link" href="#contact" @click="$emit('update:page', 'contact')">Contact</a>
+          <a class="nav-link" :class="{ 'active' : page == 'contact' }" href="#contact" @click="$emit('update:page', 'contact')">Contact</a>
         </li>
         <li class="nav-item p-md-2">
-          <a class="nav-link" href="#resume" @click="$emit('update:page', 'resume')">Resume</a>
+          <a class="nav-link" :class="{ 'active' : page == 'resume' }" href="#resume" @click="$emit('update:page', 'resume')">Resume</a>
         </li>
         <li class="nav-item p-md-2">
-          <a class="nav-link" href="#blog" @click="$emit('update:page', 'blog')">Blog</a>
+          <a class="nav-link" :class="{ 'active' : page == 'blog' }" href="#blog" @click="$emit('update:page', 'blog')">Blog</a>
         </li>
         <li class="nav-item p-md-2 dropdown text-end">
           <a class="nav-link text-nowrap" id="project-dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">

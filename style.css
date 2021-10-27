@@ -38,3 +38,6 @@ a:hover .bm-icon {
 .navdot-move {
 	transition: transform 1s;
 }
+.navdot-move-enter-active, .navdot-move-leave-active {
+	display:  none;
+}
