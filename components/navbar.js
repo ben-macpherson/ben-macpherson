@@ -47,7 +47,7 @@ export default Vue.component('navbar', {
 <nav class="navbar navbar-expand-md fixed-top py-md-4 navbar-light bg-transparent">
   <div class="container-fluid px-md-5">
     <a class="navbar-brand" href="#home">
-      <img src="name.png" alt="logo" style="width: 150px">
+      <img src="assets/name.png" alt="logo" style="width: 150px">
     </a>
     <button class="btn border-0 p-0 text-black border-none text-end navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navbar">
       <span data-feather="menu"></span>
@@ -83,7 +83,7 @@ export default Vue.component('navbar', {
         </li>
       </ul>
       <div class="d-md-flex d-none justify-content-md-end" style="min-width: 150px;">
-        <a class="btn btn-outline-dark" href="#contact">Contact</a>
+        <a class="btn btn-outline-dark px-3" onclick="$('#contact').modal('show')">Contact</a>
       </div>
     </div>
   </div>

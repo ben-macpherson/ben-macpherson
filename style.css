@@ -1,5 +1,22 @@
+:root {
+	--floral-white: #fffcf2;
+	--pale-silver: #ccc5b9;
+	--gray-olive: #403d39;
+	--eerie-black: #252422;
+	--flame: #eb5e28;
+	--dark-jungle-green: #1c211c;
+	--feldgrau: #4a594a;
+	--ash-gray: #a6b5a7;
+}
+
+.fill-feldgrau {
+	fill: var(--feldgrau);
+	background-color: var(--feldgrau);
+}
+
 body {
 	font-family: 'DM Sans', sans-serif;
+	background-color: var(--floral-white);
 }
 
 .pointer {
@@ -40,4 +57,55 @@ a:hover .bm-icon {
 }
 .navdot-move-enter-active, .navdot-move-leave-active {
 	display:  none;
+}
+
+.modal .modal-content {
+	border-radius: 32px;
+	border: none;
+}
+
+.modal .modal-header {
+	padding: 24px 24px 16px;
+	border-bottom: none;
+}
+
+.modal .modal-body {
+	padding: 0 72px;
+}
+
+.modal .modal-footer {
+	padding: 32px 72px;
+	border-top: none;
+}
+
+.modal svg.close {
+	height: 20px;
+	width: 20px;
+}
+
+.btn {
+	line-height: 2;
+	border-radius: 16px;
+}
+
+.btn-link, .btn-link:hover, .btn-link:active, .btn-link:focus {
+	color: var(--feldgrau);
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+	background-color: var(--feldgrau);
+	border-color: var(--feldgrau);
+}
+
+.btn-primary {
+	box-shadow: 1px 2px 3px 0px var(--dark-jungle-green);
+}
+
+.btn-primary:hover {
+	box-shadow: 3px 3px 4px 0px var(--dark-jungle-green);
+}
+
+.btn-primary:target, .btn-primary:active, .btn-primary:focus  {
+	box-shadow: inset 2px 2px 5px 0px var(--dark-jungle-green) !important;
+	outline: none;
 }
