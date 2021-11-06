@@ -5,6 +5,8 @@ import resume from '/components/resume.js';
 import blog from '/components/blog.js';
 import contact from '/components/contact.js';
 
+import envelope from '/components/svgs/envelope.js';
+
 $( document ).ready(function() {
   var application = new Vue({
     el: "#application",

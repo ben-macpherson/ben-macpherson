@@ -4,7 +4,7 @@ export default Vue.component('home', {
 	<div class="d-flex h-100">
 		<div class="m-auto text-center">
 			<h1>Hi, I'm Ben.</h1>
-			<h4>Software developer, honorary caveman, and night owl.</h4>
+			<h4>Software developer, honorary caveman, conscientious douchbag.</h4>
 		</form>
 		</div>
 	</div>

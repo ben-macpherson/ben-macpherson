@@ -1,5 +1,6 @@
 :root {
 	--floral-white: #fffcf2;
+	--alabaster: #EFEEE6;
 	--pale-silver: #ccc5b9;
 	--gray-olive: #403d39;
 	--eerie-black: #252422;
@@ -7,6 +8,7 @@
 	--dark-jungle-green: #1c211c;
 	--feldgrau: #4a594a;
 	--ash-gray: #a6b5a7;
+	--quick-silver: #A9A49E;
 }
 
 .fill-feldgrau {
@@ -27,10 +29,6 @@ body {
 	stroke-width: 1px;
 	height: 30px;
 	width: 30px;
-}
-
-a:hover .bm-icon {
-	color:  var(--bs-primary);
 }
 
 .copyright {
@@ -65,11 +63,11 @@ a:hover .bm-icon {
 }
 
 .modal .modal-header {
-	padding: 24px 24px 16px;
+	padding: 32px 32px 0;
 	border-bottom: none;
 }
 
-.modal .modal-body {
+.modal .modal-body, .modal .modal-name {
 	padding: 0 72px;
 }
 
@@ -101,11 +99,115 @@ a:hover .bm-icon {
 	box-shadow: 1px 2px 3px 0px var(--dark-jungle-green);
 }
 
-.btn-primary:hover {
+.btn-primary:hover, .btn-outline-primary:hover {
 	box-shadow: 3px 3px 4px 0px var(--dark-jungle-green);
 }
 
-.btn-primary:target, .btn-primary:active, .btn-primary:focus  {
+.btn-primary:target, .btn-primary:active, .btn-primary:focus, .btn-outline-primary:target, .btn-outline-primary:active, .btn-outline-primary:focus  {
 	box-shadow: inset 2px 2px 5px 0px var(--dark-jungle-green) !important;
 	outline: none;
+}
+
+.btn-outline-primary {
+	color: var(--feldgrau);
+	border-color: var(--feldgrau);
+}
+
+.btn-outline-primary:hover, .btn-outline-primary:active {
+	background-color: var(--feldgrau);
+	color: white;
+	border-color: var(--feldgrau);
+}
+
+.btn-round{
+	border-radius: 50%;
+	padding-left: 0;
+	padding-right: 0;
+	width: 50px;
+	height: 50px;
+}
+
+.floating-input-label {
+  box-sizing: border-box;
+  padding: 0 16px;
+  position: relative;
+  width: 100%;
+  background-color: #F4F6F4;
+  border-radius: 10px;
+  cursor: text;
+}
+
+.floating-input-label input, .floating-input-label textarea {
+	border: none;
+	font-size: 16px;
+	outline: 0;
+	padding: 20px 0 10px;    
+	width: 100%;
+	background: none;
+}
+
+.floating-input-label textarea {
+	padding-top: 0;
+	margin-top: 20px;
+}
+
+.floating-input-label label {
+	font-size: 16px;
+	position: absolute;
+	pointer-events: none;
+	transform-origin: top left;
+	transform: translate(0, 16px) scale(1); 
+	transition: all .1s ease-in-out;
+	color: var(--quick-silver);
+	cursor: text;
+}
+
+.floating-input-label.active {
+	background-color: #BCC8BD;
+}
+
+.floating-input-label.content label {
+	transform: translate(0, 4px) scale(.75);
+	color: var(--dark-jungle-green);
+}
+
+.modal-backdrop {
+	background-color: #1C211C;
+}
+
+.modal-backdrop.show {
+	opacity: 0.8;
+}
+
+.modal-name {
+	display: flex;
+	min-height: 34px;
+	margin-bottom: 24px;
+}
+
+.square {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+
+.square > *:first-child {
+  margin-top: 100%;
+  /* 1:1 aspect ratio */
+}
+
+.square > *:last-child {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.bm-link {
+	color: var(--feldgrau);
+}
+
+.bm-link:hover {
+	color:  var(--ash-gray);
 }
