@@ -62,23 +62,29 @@ export default Vue.component('navbar', {
       </transition-group>
       <ul class="navbar-nav flex-grow-1 justify-content-center align-items-end mb-2 mb-md-0 text-uppercase">
         <li class="nav-item text-center p-md-2">
-          <a class="nav-link" :class="{ 'active' : page == 'home' }" href="#home" @click="$emit('update:page', 'home')">Home</a>
+          <a class="nav-link" :class="{ 'active' : page == 'home' }" href="">Home</a>
         </li>
         <li class="d-md-none nav-item p-md-2">
-          <a class="nav-link" :class="{ 'active' : page == 'contact' }" href="#contact" @click="$emit('update:page', 'contact')">Contact</a>
+          <a class="nav-link" :class="{ 'active' : page == 'contact' }" onclick="$('#contact').modal('show')">Contact</a>
         </li>
         <li class="nav-item p-md-2">
-          <a class="nav-link" :class="{ 'active' : page == 'resume' }" href="#resume" @click="$emit('update:page', 'resume')">Resume</a>
+          <a class="nav-link" :class="{ 'active' : page == 'about' }" href="about">About</a>
         </li>
         <li class="nav-item p-md-2">
-          <a class="nav-link" :class="{ 'active' : page == 'blog' }" href="#blog" @click="$emit('update:page', 'blog')">Blog</a>
+          <a class="nav-link" :class="{ 'active' : page == 'skills' }" href="skills">Skills</a>
+        </li>
+        <li class="nav-item p-md-2">
+          <a class="nav-link" :class="{ 'active' : page == 'musings' }" href="musings">Musings</a>
         </li>
         <li class="nav-item p-md-2 dropdown text-end">
           <a class="nav-link text-nowrap" id="project-dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Projects <i data-feather="chevron-down" style="width: 16px; height: 16px;"></i>
+            Portfolio <i data-feather="chevron-down" style="width: 16px; height: 16px;"></i>
           </a>
-          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-md-start" aria-labelledby="project-dropdown">
-            <li><a class="dropdown-item pointer text-md-start text-end" href="#css-studio" @click="$emit('update:page', 'css-studio')">CSS Studio</a></li>
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-md-start" aria-labelledby="project-dropdown">  
+            <li><a class="dropdown-item pointer text-md-start text-end" href="portfolio/css-studio">CSS Studio</a></li>
+            <li><a class="dropdown-item pointer text-md-start text-end" href="portfolio/bodo-health">Bodo Health</a></li>
+            <li><a class="dropdown-item pointer text-md-start text-end" href="portfolio/bodo-studio">Bodo Studio</a></li>
+            <li><a class="dropdown-item pointer text-md-start text-end" href="portfolio/geofilter-studio">Geofilter Studio CRM</a></li>
           </ul>
         </li>
       </ul>

@@ -44,9 +44,9 @@ export default Vue.component('contact', {
           </div>
       	</div>
         <div class="col-lg-6 d-lg-flex d-none text-center ps-3 pe-0 flex-column">
-          <div class="modal-body d-flex ps-0 flex-column justify-content-end">
+          <div class="modal-body d-flex ps-0 flex-column justify-content-between">
             <envelope :height="'60%'" class="position-relative"></envelope>
-            <div class="card" style="border-color: var(--alabaster)">
+            <div class="card mt-3" style="border-color: var(--alabaster)">
               <div class="card-body">
                 <div class="text-start" style="color: var(--feldgrau)">
                   <i data-feather="map-pin" style="height: 14px; color: var(--ash-gray)" class="me-2"></i><span>Winnipeg, CA</span><br>

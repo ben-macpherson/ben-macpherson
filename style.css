@@ -211,3 +211,15 @@ body {
 .bm-link:hover {
 	color:  var(--ash-gray);
 }
+
+.footer-social-button {
+	padding-left: 0;
+	transition-property: padding-left;
+	transition-duration:  0.3s;
+}
+
+.footer-social-button:hover {
+	padding-left: 15px;
+}
+
+
