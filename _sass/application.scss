@@ -59,12 +59,15 @@ body {
 
 .modal .modal-content {
 	border-radius: 32px;
-	border: none;
+}
+@media (max-width: 575px){
+	.modal .modal-content {
+		border-radius: 0;
+	}
 }
 
 .modal .modal-header {
 	padding: 32px 32px 0;
-	border-bottom: none;
 }
 
 .modal .modal-body, .modal .modal-name {
@@ -73,7 +76,6 @@ body {
 
 .modal .modal-footer {
 	padding: 32px 72px;
-	border-top: none;
 }
 
 .modal svg.close {

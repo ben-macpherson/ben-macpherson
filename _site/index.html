@@ -1,23 +1,105 @@
-export default Vue.component('envelope', {
-	props: {
-        height: {
-            default: '100%'
-        },
-        width: {
-            default: '100%'
-        },
-    },
-    computed: {
-        parent_style: function() {
-            return {
-                height: this.height,
-                width: this.width,
-            }
-        }
-    },
-    template: `
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ben MacPherson</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+	<!-- google fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet"> 
+	<!-- feather -->
+	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+	<!-- jquery -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<!-- vuejs -->
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script> <!-- switch to prod -->
+	<!-- my css -->
+	<link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
+	<!-- my vue app -->
+</head>
+<body>
+	<nav id="navbar" class="navbar navbar-expand-md fixed-top py-md-4 navbar-light bg-transparent">
+  <div class="container-fluid px-md-5">
+    <a class="navbar-brand" href="#home">
+      <img src="assets/images/name.png" alt="logo" style="width: 150px">
+    </a>
+    <button class="btn border-0 p-0 text-black border-none text-end navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navbar">
+      <span data-feather="menu"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar">
+      <ul class="navbar-nav flex-grow-1 justify-content-center align-items-end mb-2 mb-md-0 text-uppercase">
+        <li class="nav-item text-center p-md-2">
+          <navdot v-if="page == '/'"></navdot>
+          <a class="nav-link" :class="{ 'active' : page == '/' }" href="">Home</a>
+        </li>
+        <!-- <li class="d-md-none nav-item p-md-2">
+          <a class="nav-link" :class="{ 'active' : page == 'contact' }" onclick="$('#contact').modal('show')">Contact</a>
+        </li> -->
+        <!-- <li class="nav-item p-md-2">
+          <a class="nav-link" :class="{ 'active' : page == 'about' }" href="about">About</a>
+        </li> -->
+        <!-- <li class="nav-item p-md-2">
+          <a class="nav-link" :class="{ 'active' : page == 'skills' }" href="skills">Skills</a>
+        </li> -->
+        <!-- <li class="nav-item p-md-2">
+          <a class="nav-link" :class="{ 'active' : page == 'musings' }" href="musings">Musings</a>
+        </li> -->
+        <!-- <li class="nav-item p-md-2 dropdown text-end">
+          <a class="nav-link text-nowrap" id="project-dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Portfolio <i data-feather="chevron-down" style="width: 16px; height: 16px;"></i>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-md-start" aria-labelledby="project-dropdown">  
+            <li><a class="dropdown-item pointer text-md-start text-end" href="portfolio/css-studio">CSS Studio</a></li>
+            <li><a class="dropdown-item pointer text-md-start text-end" href="portfolio/bodo-health">Bodo Health</a></li>
+            <li><a class="dropdown-item pointer text-md-start text-end" href="portfolio/bodo-studio">Bodo Studio</a></li>
+            <li><a class="dropdown-item pointer text-md-start text-end" href="portfolio/geofilter-studio">Geofilter Studio CRM</a></li>
+          </ul>
+        </li> -->
+      </ul>
+      <div class="d-md-flex d-none justify-content-md-end" style="min-width: 150px;">
+        <a class="btn btn-outline-dark px-3" onclick="$('#contact').modal('show')">Contact</a>
+      </div>
+    </div>
+  </div>
+</nav>
 
-<div :style="parent_style">
+<div class="modal" tabindex="-1" id="contact">
+  <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down modal-lg">
+    <div class="modal-content border-0">
+      <div class="modal-header border-0 justify-content-end align-items-end">
+        <i data-feather="x" class="close pointer" data-bs-dismiss="modal"></i>
+      </div>
+      <div class="modal-name">
+        <h3 class="w-100 text-center m-0">Lets talk.</h3>
+      </div>
+      <div class="row m-0">
+        <div class="col d-flex flex-column pe-lg-3 pe-0 ps-0">
+          <div class="modal-body d-flex flex-column pe-lg-0">
+            <div class="floating-input-label mb-3">
+              <label for="classic-contact-name">Name</label>
+              <input type="text" email="name" id="classic-contact-name">
+            </div>
+            <div class="floating-input-label mb-3">
+              <label for="classic-contact-email">Email / Phone</label>
+              <input type="email" name="email" id="classic-contact-email">
+            </div>
+            <div class="floating-input-label h-100">
+              <label for="classic-contact-email">Message</label>
+              <textarea name="message" id="class-contact-message" rows="5" style="resize: none"></textarea>
+            </div>
+          </div>
+          <div class="modal-footer border-0 justify-content-center mt-auto pb-5 pb-lg-0 pe-lg-0">
+            <button type="button" class="btn btn-link bm-link" data-bs-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-primary px-5">Send</button>
+          </div>
+        </div>
+        <div class="col-lg-6 d-lg-flex d-none text-center ps-3 pe-0 flex-column">
+          <div class="modal-body d-flex ps-0 flex-column justify-content-between">
+            <div class="position-relative" style="height: 60%; width: 100%;">
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg id="envelope" width="100%" height="100%" class="d-block position-absolute" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
@@ -125,5 +207,88 @@ export default Vue.component('envelope', {
     </g>
 </svg>
 </div>
+            <div class="card mt-3" style="border-color: var(--alabaster)">
+              <div class="card-body">
+                <div class="text-start" style="color: var(--feldgrau)">
+                  <i data-feather="map-pin" style="height: 14px; color: var(--ash-gray)" class="me-2"></i><span>Winnipeg, CA</span><br>
+                  <i data-feather="phone"   style="height: 14px; color: var(--ash-gray)" class="me-2"></i><a class="bm-link" href="tel:2042267347">+1 (204) 226-7347</a><br>
+                  <i data-feather="mail"    style="height: 14px; color: var(--ash-gray)" class="me-2"></i><a class="bm-link" href="mailto:ben@benmacpherson.dev">ben@benmacpherson.dev</a>
+                </div>
+              </div>
+            </div>
+                
+          </div>
+          <div class="modal-footer border-0 ps-0 justify-content-center mt-auto pb-lg-0">
+            <a class="btn btn-outline-primary btn-round mx-1" href="https://www.linkedin.com/in/ben-macp" target="_blank"><i data-feather="linkedin" class="bm-icon" style="height: 25px;"></i></a>
+            <a class="btn btn-outline-primary btn-round mx-1" href="https://instagram.com/ben.macp" target="_blank"><i data-feather="instagram" class="bm-icon" style="height: 25px;"></i></a>
+            <a class="btn btn-outline-primary btn-round mx-1" href="https://twitter.com/ben_macp" target="_blank"><i data-feather="twitter" class="bm-icon" style="height: 25px;"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer border-0 p-0 p-lg-4"></div>
+    </div>
+  </div>
+</div>
 
-`});
+<script type="text/javascript">
+  $(document).ready(function() {
+    $(".floating-input-label input, .floating-input-label textarea").focus(function() {
+      $(this).parent().addClass('active content')
+    })
+
+   $(".floating-input-label input, .floating-input-label textarea").focusout(function() {
+      $(this).parent().removeClass('active');
+      if(!$(this).val()) $(this).parent().removeClass('content');
+    })
+  })
+</script>
+
+
+<script type="text/javascript">
+$( document ).ready(function() {
+  var navbar = new Vue({
+    el: "#navbar",
+    data: {
+      page: "/",
+    },
+  });
+});
+
+Vue.component('navdot', {
+  template: `
+    <div id="navdot" class="d-none d-md-inline"> 
+      <svg viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="50"/>
+      </svg>
+    </div>`
+});
+
+</script>
+
+	<div class="container-fluid" style="height: 100vh">
+	<div class="d-flex h-100">
+		<div class="m-auto text-center">
+			<h1>Hi, I'm Ben.</h1>
+			<h4>Software developer, honorary caveman, conscientious douchbag.</h4>
+		</form>
+		</div>
+	</div>
+</div>
+	<div class="fixed-bottom d-flex align-items-end px-md-5 px-2 py-md-5 py-2">
+	<div class="d-flex flex-column w-auto">
+		<a class="footer-social-button mb-2 text-black" href="https://www.linkedin.com/in/ben-macp" target="_blank"><i data-feather="linkedin" class="bm-icon"></i></a>
+		<a class="footer-social-button mb-2 text-black" href="https://instagram.com/ben.macp" target="_blank"><i data-feather="instagram" class="bm-icon"></i></a>
+		<a class="footer-social-button mb-2 text-black" href="https://twitter.com/ben_macp" target="_blank"><i data-feather="twitter" class="bm-icon"></i></a>
+		<a class="footer-social-button text-black" href="https://github.com/ben-macpherson" target="_blank"><i data-feather="github" class="bm-icon"></i></a>
+	</div>
+	<p class="ms-auto text-uppercase text-end m-0 copyright">
+		Copr. 2021 Ben MacPherson<br>
+		All rights reserved
+	</p>
+</div>
+
+	<script type="text/javascript">
+		feather.replace();
+	</script>
+</body>
+</html>
