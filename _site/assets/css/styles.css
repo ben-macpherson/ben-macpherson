@@ -1,4 +1,5 @@
-:root { --floral-white: #fffcf2; --alabaster: #EFEEE6; --pale-silver: #ccc5b9; --gray-olive: #403d39; --eerie-black: #252422; --flame: #eb5e28; --dark-jungle-green: #1c211c; --feldgrau: #4a594a; --ash-gray: #a6b5a7; --quick-silver: #A9A49E; }
+:root { --baby-powder: #FFFEFB; --floral-white: #fffcf2; --ash-gray: #a6b5a7; --feldgrau: #4a594a; --quick-silver: #A9A49E; --black-olive: #403d39; --dark-jungle-green: #1c211c; --flame: #eb5e28; --primary: var(--feldgrau)
+; }
 
 .fill-feldgrau { fill: var(--feldgrau); background-color: var(--feldgrau); }
 
@@ -36,7 +37,7 @@ body { font-family: 'DM Sans', sans-serif; background-color: var(--floral-white)
 
 .btn-link, .btn-link:hover, .btn-link:active, .btn-link:focus { color: var(--feldgrau); }
 
-.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:focus { background-color: var(--feldgrau); border-color: var(--feldgrau); }
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:focus { background-color: var(--primary); border-color: var(--primary); }
 
 .btn-primary { box-shadow: 1px 2px 3px 0px var(--dark-jungle-green); }
 
