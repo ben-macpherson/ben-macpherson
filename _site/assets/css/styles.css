@@ -15,7 +15,7 @@ body { font-family: 'DM Sans', sans-serif; background-color: var(--floral-white)
 
 #navdot { position: fixed; top: 18px; }
 
-#navdot svg { width: 8px; height: 8px; fill: black; }
+#navdot svg { width: 8px; height: 8px; fill: black; position: relative; right: 4px; }
 
 .navdot-move { transition: transform 1s; }
 
