@@ -1,228 +1,216 @@
 :root {
+	// palette
 	--baby-powder: #FFFEFB;
 	--floral-white: #fffcf2;
-	--ash-gray: #a6b5a7;
+	--cultured: #F4F6F4;
+	--ash-gray: #BCC8BD;
 	--feldgrau: #4a594a;
 	--quick-silver: #A9A49E;
 	--black-olive: #403d39;
 	--dark-jungle-green: #1c211c;
 	--flame: #eb5e28;
-	--primary: var(--feldgrau)
+	// simplified 
+	--ultra-light-primary: var(--cultured);
+	--light-primary: var(--ash-gray);
+	--primary: var(--feldgrau);
+	--gray: var(--quick-silver);
+	--dark: var(--dark-jungle-green);
+	--off-white: var(--floral-white);
+	--white: var(--baby-powder);
 }
 
-.fill-feldgrau {
-	fill: var(--feldgrau);
-	background-color: var(--feldgrau);
-}
+// ---------------- tag adjustments --------------- \\
 
 body {
 	font-family: 'DM Sans', sans-serif;
-	background-color: var(--floral-white);
+	background-color: var(--off-white);
 }
+
+small {
+	font-size: 12px;
+	font-weight: 500;
+}
+
+textarea {
+	resize: none;
+}
+
+h3 {
+	color: var(--dark)
+}
+
+// ---------------- bootstrap adjustments --------------- \\
+
+//buttons
+.btn {
+	line-height: 2;
+	border-radius: 16px;
+	&:focus {
+		box-shadow: none;
+	}
+}
+
+.btn-link, .btn-link:hover, .btn-link:active, .btn-link:focus {
+	color: var(--primary);
+}
+
+//modals
+.modal {
+	.modal-content {
+		@media (max-width: 575px){
+			border-radius: 0;
+		}
+		border-radius: 32px;
+		.modal-header {
+			padding: 32px 32px 0;
+			svg.close {
+				height: 20px;
+				width: 20px;
+			}
+		}
+		.modal-body, .modal-name {
+			padding: 0 72px;
+		}
+		.modal-name {
+			display: flex;
+			min-height: 34px;
+			margin-bottom: 24px;
+		}
+		.modal-footer {
+			padding: 32px 72px;
+		}
+	}
+}
+.modal-backdrop {
+	background-color: var(--dark);
+	&.show{
+		opacity: 0.8;
+	}
+}
+
+// ---------------- color classes --------------- \\
+
+.fill-primary {
+	fill: var(--primary);
+	background-color: var(--primary);
+}
+
+.fill-white {
+	fill: var(--white);
+	background-color: var(--white);
+}
+
+.primary {
+	color: var(--primary);
+}
+
+.border-dark {
+	border-color: var(--dark);
+}
+
+// ---------------- classes I add to everything I work on --------------- \\
 
 .pointer {
 	cursor: pointer !important;
+}
+
+// ---------------- BM (site) css --------------- \\
+
+.bm-link {
+	color: var(--feldgrau);
+	&:hover {
+		color:  var(--ash-gray);
+	}
 }
 
 .bm-icon {
 	stroke-width: 1px;
 	height: 30px;
 	width: 30px;
-}
-
-.copyright {
-	font-size: 12px;
-	font-weight: 500;
-}
-
-.btn:focus {
-	box-shadow: none;
-}
-
-#navdot {
-	position: fixed;	
-	top: 18px;
-}
-#navdot svg {
-	width: 8px;
-	height: 8px;
-	fill: black;
-	position: relative;
-	right: 4px;
-}
-
-.navdot-move {
-	transition: transform 1s;
-}
-.navdot-move-enter-active, .navdot-move-leave-active {
-	display:  none;
-}
-
-.modal .modal-content {
-	border-radius: 32px;
-}
-@media (max-width: 575px){
-	.modal .modal-content {
-		border-radius: 0;
+	&.tiny {
+		height: 14px;
+		width: 14px;
 	}
 }
 
-.modal .modal-header {
-	padding: 32px 32px 0;
+.bm-floating-input-label {
+  box-sizing: border-box;
+  padding: 0 16px;
+  position: relative;
+  width: 100%;
+  background-color: var(--ultra-light-primary);
+  border-radius: 10px;
+  cursor: text;
+  input, textarea {
+  	border: none;
+		font-size: 16px;
+		outline: 0;
+		padding: 20px 0 10px;    
+		width: 100%;
+		background: none;
+  }
+  textarea {
+  	padding-top: 0;
+		margin-top: 20px;
+  }
+  label {
+  	font-size: 16px;
+		position: absolute;
+		pointer-events: none;
+		transform-origin: top left;
+		transform: translate(0, 16px) scale(1); 
+		transition: all .1s ease-in-out;
+		color: var(--gray);
+		cursor: text;
+  }
+  &.active {
+  	background-color: var(--light-primary);
+  }
+  &.content label {
+  	transform: translate(0, 4px) scale(.75);
+		color: var(--dark);
+  }
 }
 
-.modal .modal-body, .modal .modal-name {
-	padding: 0 72px;
-}
+//buttons
 
-.modal .modal-footer {
-	padding: 32px 72px;
-}
-
-.modal svg.close {
-	height: 20px;
-	width: 20px;
-}
-
-.btn {
-	line-height: 2;
-	border-radius: 16px;
-}
-
-.btn-link, .btn-link:hover, .btn-link:active, .btn-link:focus {
-	color: var(--feldgrau);
-}
-
-.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:focus {
-	background-color: var(--primary);
-	border-color: var(--primary);
-}
-
-.btn-primary {
-	box-shadow: 1px 2px 3px 0px var(--dark-jungle-green);
-}
-
-.btn-primary:hover, .btn-outline-primary:hover {
-	box-shadow: 3px 3px 4px 0px var(--dark-jungle-green);
-}
-
-.btn-primary:target, .btn-primary:active, .btn-primary:focus, .btn-outline-primary:target, .btn-outline-primary:active, .btn-outline-primary:focus  {
-	box-shadow: inset 2px 2px 5px 0px var(--dark-jungle-green) !important;
-	outline: none;
-}
-
-.btn-outline-primary {
-	color: var(--feldgrau);
-	border-color: var(--feldgrau);
-}
-
-.btn-outline-primary:hover, .btn-outline-primary:active {
-	background-color: var(--feldgrau);
-	color: white;
-	border-color: var(--feldgrau);
-}
-
-.btn-round{
+.bm-icon-btn {
 	border-radius: 50%;
 	padding-left: 0;
 	padding-right: 0;
 	width: 50px;
 	height: 50px;
+	.bm-icon {
+		height: 25px;
+		width: 25px;
+	}
 }
 
-.floating-input-label {
-  box-sizing: border-box;
-  padding: 0 16px;
-  position: relative;
-  width: 100%;
-  background-color: #F4F6F4;
-  border-radius: 10px;
-  cursor: text;
+.bm-btn-primary {
+	box-shadow: 1px 2px 3px 0px var(--dark);
+	background-color: var(--primary);
+	border-color: var(--primary);
+	color: var(--white);
+	&:hover {
+		box-shadow: 3px 3px 4px 0px var(--dark);
+		color: var(--white);
+	}
+	&:target, &:active, &:focus {
+		box-shadow: inset 2px 2px 5px 0px var(--dark) !important;
+		outline: none;	
+	}
 }
 
-.floating-input-label input, .floating-input-label textarea {
-	border: none;
-	font-size: 16px;
-	outline: 0;
-	padding: 20px 0 10px;    
-	width: 100%;
-	background: none;
+.bm-btn-outline-primary {
+	color: var(--primary);
+	border-color: var(--primary);
+	&:hover {
+		box-shadow: 3px 3px 4px 0px var(--dark);	
+		background-color: var(--primary);
+		color: var(--white);
+	}
+	&:target, &:active, &:focus {
+		box-shadow: inset 2px 2px 5px 0px var(--dark) !important;
+		outline: none;	
+	}
 }
-
-.floating-input-label textarea {
-	padding-top: 0;
-	margin-top: 20px;
-}
-
-.floating-input-label label {
-	font-size: 16px;
-	position: absolute;
-	pointer-events: none;
-	transform-origin: top left;
-	transform: translate(0, 16px) scale(1); 
-	transition: all .1s ease-in-out;
-	color: var(--quick-silver);
-	cursor: text;
-}
-
-.floating-input-label.active {
-	background-color: #BCC8BD;
-}
-
-.floating-input-label.content label {
-	transform: translate(0, 4px) scale(.75);
-	color: var(--dark-jungle-green);
-}
-
-.modal-backdrop {
-	background-color: #1C211C;
-}
-
-.modal-backdrop.show {
-	opacity: 0.8;
-}
-
-.modal-name {
-	display: flex;
-	min-height: 34px;
-	margin-bottom: 24px;
-}
-
-.square {
-  display: inline-block;
-  position: relative;
-  width: 100%;
-}
-
-.square > *:first-child {
-  margin-top: 100%;
-  /* 1:1 aspect ratio */
-}
-
-.square > *:last-child {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
-.bm-link {
-	color: var(--feldgrau);
-}
-
-.bm-link:hover {
-	color:  var(--ash-gray);
-}
-
-.footer-social-button {
-	padding-left: 0;
-	transition-property: padding-left;
-	transition-duration:  0.3s;
-}
-
-.footer-social-button:hover {
-	padding-left: 15px;
-}
-
-

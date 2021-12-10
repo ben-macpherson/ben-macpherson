@@ -27,6 +27,16 @@
 	{% include footer.html %}
 	<script type="text/javascript">
 		feather.replace();
+		$(document).ready(function() {
+		    $(".bm-floating-input-label input, .bm-floating-input-label textarea").focus(function() {
+		      $(this).parent().addClass('active content')
+		    })
+
+		   $(".bm-floating-input-label input, .bm-floating-input-label textarea").focusout(function() {
+		      $(this).parent().removeClass('active');
+		      if(!$(this).val()) $(this).parent().removeClass('content');
+		    })
+		})
 	</script>
 </body>
 </html>

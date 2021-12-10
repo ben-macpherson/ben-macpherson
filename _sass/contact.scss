@@ -1,0 +1,11 @@
+#navdot {
+	position: fixed;	
+	top: 18px;
+	svg {
+		width: 8px;
+		height: 8px;
+		fill: black;
+		position: relative;
+		right: 4px;
+	}
+}

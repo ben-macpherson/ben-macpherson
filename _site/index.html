@@ -69,7 +69,7 @@
 
 <div class="modal" tabindex="-1" id="contact">
   <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down modal-lg">
-    <div class="modal-content border-0" style="background-color: var(--baby-powder)">
+    <div class="modal-content border-0 fill-white">
       <div class="modal-header border-0 justify-content-end align-items-end">
         <i data-feather="x" class="close pointer" data-bs-dismiss="modal"></i>
       </div>
@@ -79,22 +79,22 @@
       <div class="row m-0">
         <div class="col d-flex flex-column pe-lg-3 pe-0 ps-0">
           <div class="modal-body d-flex flex-column pe-lg-0">
-            <div class="floating-input-label mb-3">
+            <div class="bm-floating-input-label mb-3">
               <label for="classic-contact-name">Name</label>
               <input type="text" email="name" id="classic-contact-name">
             </div>
-            <div class="floating-input-label mb-3">
+            <div class="bm-floating-input-label mb-3">
               <label for="classic-contact-email">Email / Phone</label>
               <input type="email" name="email" id="classic-contact-email">
             </div>
-            <div class="floating-input-label h-100">
+            <div class="bm-floating-input-label h-100">
               <label for="classic-contact-email">Message</label>
-              <textarea name="message" id="class-contact-message" rows="5" style="resize: none"></textarea>
+              <textarea name="message" id="class-contact-message" rows="5"></textarea>
             </div>
           </div>
           <div class="modal-footer border-0 justify-content-center mt-auto pb-5 pb-lg-0 pe-lg-0">
             <button type="button" class="btn btn-link bm-link" data-bs-dismiss="modal">Cancel</button>
-            <button type="button" class="btn btn-primary px-5">Send</button>
+            <button type="button" class="btn bm-btn-primary px-5">Send</button>
           </div>
         </div>
         <div class="col-lg-6 d-lg-flex d-none text-center ps-3 pe-0 flex-column">
@@ -207,21 +207,21 @@
     </g>
 </svg>
 </div>
-            <div class="card mt-3" style="border-color: var(--alabaster); background-color: var(--baby-powder)">
+            <div class="card fill-white border-dark mt-3">
               <div class="card-body">
-                <div class="text-start" style="color: var(--feldgrau)">
-                  <i data-feather="map-pin" style="height: 14px; color: var(--ash-gray)" class="me-2"></i><span>Winnipeg, CA</span><br>
-                  <i data-feather="phone"   style="height: 14px; color: var(--ash-gray)" class="me-2"></i><a class="bm-link" href="tel:2042267347">+1 (204) 226-7347</a><br>
-                  <i data-feather="mail"    style="height: 14px; color: var(--ash-gray)" class="me-2"></i><a class="bm-link" href="mailto:ben@benmacpherson.dev">ben@benmacpherson.dev</a>
+                <div class="text-start primary">
+                  <i data-feather="map-pin" class="bm-icon tiny me-2"></i><span>Winnipeg, CA</span><br>
+                  <i data-feather="phone" class="bm-icon tiny me-2"></i><a class="bm-link" href="tel:2042267347">+1 (204) 226-7347</a><br>
+                  <i data-feather="mail" class="bm-icon tiny me-2"></i><a class="bm-link" href="mailto:ben@benmacpherson.dev">ben@benmacpherson.dev</a>
                 </div>
               </div>
             </div>
                 
           </div>
           <div class="modal-footer border-0 ps-0 justify-content-center mt-auto pb-lg-0">
-            <a class="btn btn-outline-primary btn-round mx-1" href="https://www.linkedin.com/in/ben-macp" target="_blank"><i data-feather="linkedin" class="bm-icon" style="height: 25px;"></i></a>
-            <a class="btn btn-outline-primary btn-round mx-1" href="https://instagram.com/ben.macp" target="_blank"><i data-feather="instagram" class="bm-icon" style="height: 25px;"></i></a>
-            <a class="btn btn-outline-primary btn-round mx-1" href="https://twitter.com/ben_macp" target="_blank"><i data-feather="twitter" class="bm-icon" style="height: 25px;"></i></a>
+            <a class="btn bm-btn-outline-primary bm-icon-btn mx-1" href="https://www.linkedin.com/in/ben-macp" target="_blank"><i data-feather="linkedin" class="bm-icon"></i></a>
+            <a class="btn bm-btn-outline-primary bm-icon-btn mx-1" href="https://instagram.com/ben.macp" target="_blank"><i data-feather="instagram" class="bm-icon"></i></a>
+            <a class="btn bm-btn-outline-primary bm-icon-btn mx-1" href="https://twitter.com/ben_macp" target="_blank"><i data-feather="twitter" class="bm-icon"></i></a>
           </div>
         </div>
       </div>
@@ -230,23 +230,11 @@
   </div>
 </div>
 
-<script type="text/javascript">
-  $(document).ready(function() {
-    $(".floating-input-label input, .floating-input-label textarea").focus(function() {
-      $(this).parent().addClass('active content')
-    })
-
-   $(".floating-input-label input, .floating-input-label textarea").focusout(function() {
-      $(this).parent().removeClass('active');
-      if(!$(this).val()) $(this).parent().removeClass('content');
-    })
-  })
-</script>
-
 
 <script type="text/javascript">
 $( document ).ready(function() {
   var navbar = new Vue({
+    name: "navbar",
     el: "#navbar",
     data: {
       page: "/",
@@ -281,14 +269,24 @@ Vue.component('navdot', {
 		<a class="footer-social-button mb-2 text-black" href="https://twitter.com/ben_macp" target="_blank"><i data-feather="twitter" class="bm-icon"></i></a>
 		<a class="footer-social-button text-black" href="https://github.com/ben-macpherson" target="_blank"><i data-feather="github" class="bm-icon"></i></a>
 	</div>
-	<p class="ms-auto text-uppercase text-end m-0 copyright">
+	<small class="ms-auto text-uppercase text-end m-0">
 		Copr. 2021 Ben MacPherson<br>
 		All rights reserved
-	</p>
+	</small>
 </div>
 
 	<script type="text/javascript">
 		feather.replace();
+		$(document).ready(function() {
+		    $(".bm-floating-input-label input, .bm-floating-input-label textarea").focus(function() {
+		      $(this).parent().addClass('active content')
+		    })
+
+		   $(".bm-floating-input-label input, .bm-floating-input-label textarea").focusout(function() {
+		      $(this).parent().removeClass('active');
+		      if(!$(this).val()) $(this).parent().removeClass('content');
+		    })
+		})
 	</script>
 </body>
 </html>
