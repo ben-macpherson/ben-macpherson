@@ -22,11 +22,17 @@ h3 { color: var(--dark); }
 
 .modal .modal-content .modal-header svg.close { height: 20px; width: 20px; }
 
+@media (max-width: 575px) { .modal .modal-content .modal-header svg.close { display: none; } }
+
 .modal .modal-content .modal-body, .modal .modal-content .modal-name { padding: 0 72px; }
+
+@media (max-width: 575px) { .modal .modal-content .modal-body, .modal .modal-content .modal-name { padding: 0 36px; } }
 
 .modal .modal-content .modal-name { display: flex; min-height: 34px; margin-bottom: 24px; }
 
 .modal .modal-content .modal-footer { padding: 32px 72px; }
+
+@media (max-width: 575px) { .modal .modal-content .modal-footer { padding: 32px 36px; } }
 
 .modal-backdrop { background-color: var(--dark); }
 
@@ -87,5 +93,9 @@ h3 { color: var(--dark); }
 .footer-social-button { padding-left: 0; transition-property: padding-left; transition-duration: 0.3s; }
 
 .footer-social-button:hover { padding-left: 15px; }
+
+#logo { width: 150px; }
+
+#contact-button-container { min-width: 150px; }
 
 /*# sourceMappingURL=styles.css.map */

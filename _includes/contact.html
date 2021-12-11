@@ -1,14 +1,20 @@
 <div class="modal" tabindex="-1" id="contact">
   <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down modal-lg">
     <div class="modal-content border-0 fill-white">
+
       <div class="modal-header border-0 justify-content-end align-items-end">
         <i data-feather="x" class="close pointer" data-bs-dismiss="modal"></i>
       </div>
-      <div class="modal-name">
-        <h3 class="w-100 text-center m-0">Lets talk.</h3>
+      
+      <div class="modal-name d-flex">
+        <h3 class="m-0 ms-lg-auto me-auto">Lets talk.</h3>
+        <a href="mailto:{{ site.email }}" class="d-lg-none d-inline"><i data-feather="mail" class="bm-icon primary"></i></a>
+        <a href="tel:{{ site.phone }}" class="d-lg-none d-inline ms-2"><i data-feather="phone" class="bm-icon primary"></i></a>
       </div>
+      
       <div class="row m-0">
-        <div class="col d-flex flex-column pe-lg-3 pe-0 ps-0">
+        
+        <div class="col pe-lg-3 px-0">
           <div class="modal-body d-flex flex-column pe-lg-0">
             <div class="bm-floating-input-label mb-3">
               <label for="classic-contact-name">Name</label>
@@ -28,6 +34,7 @@
             <button type="button" class="btn bm-btn-primary px-5">Send</button>
           </div>
         </div>
+
         <div class="col-lg-6 d-lg-flex d-none text-center ps-3 pe-0 flex-column">
           <div class="modal-body d-flex ps-0 flex-column justify-content-between">
             {% include svgs/envelope.html height="60%" width="100%" %}
@@ -39,8 +46,7 @@
                   <i data-feather="mail" class="bm-icon tiny me-2"></i><a class="bm-link" href="mailto:{{ site.email }}">{{ site.email }}</a>
                 </div>
               </div>
-            </div>
-                
+            </div>       
           </div>
           <div class="modal-footer border-0 ps-0 justify-content-center mt-auto pb-lg-0">
             <a class="btn bm-btn-outline-primary bm-icon-btn mx-1" href="https://www.linkedin.com/in/{{ site.linkedin_username }}" target="_blank"><i data-feather="linkedin" class="bm-icon"></i></a>
@@ -48,8 +54,12 @@
             <a class="btn bm-btn-outline-primary bm-icon-btn mx-1" href="https://twitter.com/{{ site.twitter_username }}" target="_blank"><i data-feather="twitter" class="bm-icon"></i></a>
           </div>
         </div>
+
       </div>
+
       <div class="modal-footer border-0 p-0 p-lg-4"></div>
+
     </div>
   </div>
 </div>
+

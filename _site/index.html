@@ -16,29 +16,32 @@
 	<!-- jquery -->
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	<!-- vuejs -->
-	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script> <!-- switch to prod -->
+	
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+	
 	<!-- my css -->
 	<link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
-	<!-- my vue app -->
+	<!-- my js -->
+	<script type="module" src="/assets/js/application.js"></script>
 </head>
 <body>
-	<nav id="navbar" class="navbar navbar-expand-md fixed-top py-md-4 navbar-light bg-transparent">
-  <div class="container-fluid px-md-5">
+	<nav id="navbar" class="navbar navbar-expand-md fixed-top py-sm-4 py-3 navbar-light bg-transparent">
+  <div class="container-fluid px-sm-5 px-3">
     <a class="navbar-brand" href="#home">
-      <img src="assets/images/name.png" alt="logo" style="width: 150px">
+      <img src="assets/images/name.png" id="logo" alt="logo - Ben MacPherson">
     </a>
-    <button class="btn border-0 p-0 text-black border-none text-end navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navbar">
+    <button class="btn border-0 p-0 text-black border-none text-end navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navbar">
       <span data-feather="menu"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbar">
+    <div class="collapse navbar-collapse" id="navbar-menu">
       <ul class="navbar-nav flex-grow-1 justify-content-center align-items-end mb-2 mb-md-0 text-uppercase">
         <li class="nav-item text-center p-md-2">
           <navdot v-if="page == '/'"></navdot>
           <a class="nav-link" :class="{ 'active' : page == '/' }" href="">Home</a>
         </li>
-        <!-- <li class="d-md-none nav-item p-md-2">
+        <li class="d-md-none nav-item p-md-2">
           <a class="nav-link" :class="{ 'active' : page == 'contact' }" onclick="$('#contact').modal('show')">Contact</a>
-        </li> -->
+        </li>
         <!-- <li class="nav-item p-md-2">
           <a class="nav-link" :class="{ 'active' : page == 'about' }" href="about">About</a>
         </li> -->
@@ -60,24 +63,74 @@
           </ul>
         </li> -->
       </ul>
-      <div class="d-md-flex d-none justify-content-md-end" style="min-width: 150px;">
+      <div class="d-md-flex d-none justify-content-md-end" id="contact-button-container">
         <a class="btn btn-outline-dark px-3" onclick="$('#contact').modal('show')">Contact</a>
       </div>
     </div>
   </div>
 </nav>
 
-<div class="modal" tabindex="-1" id="contact">
+<script type="text/javascript">
+$( document ).ready(function() {
+  var navbar = new Vue({
+    name: "navbar",
+    el: "#navbar",
+    data: {
+      page: "/",
+    },
+  });
+});
+
+Vue.component('navdot', {
+  template: `
+    <div id="navdot" class="d-none d-md-inline"> 
+      <svg viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="50"/>
+      </svg>
+    </div>`
+});
+
+</script>
+
+	<div class="container-fluid" style="height: 100vh">
+	<div class="d-flex h-100">
+		<div class="m-auto text-center">
+			<h1>Hi, I'm Ben.</h1>
+			<h4>Software developer, honorary caveman, conscientious douchbag.</h4>
+		</form>
+		</div>
+	</div>
+</div>
+	<div class="fixed-bottom d-flex align-items-end px-md-5 px-3 py-sm-4 py-3">
+	<div class="d-flex flex-column w-auto">
+		<a class="footer-social-button mb-2 text-black" href="https://www.linkedin.com/in/ben-macp" target="_blank"><i data-feather="linkedin" class="bm-icon"></i></a>
+		<a class="footer-social-button mb-2 text-black" href="https://instagram.com/ben.macp" target="_blank"><i data-feather="instagram" class="bm-icon"></i></a>
+		<a class="footer-social-button mb-2 text-black" href="https://twitter.com/ben_macp" target="_blank"><i data-feather="twitter" class="bm-icon"></i></a>
+		<a class="footer-social-button text-black" href="https://github.com/ben-macpherson" target="_blank"><i data-feather="github" class="bm-icon"></i></a>
+	</div>
+	<small class="ms-auto text-uppercase text-end m-0">
+		© 2021 Ben MacPherson<br>
+		All rights reserved
+	</small>
+</div>
+
+	<div class="modal" tabindex="-1" id="contact">
   <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down modal-lg">
     <div class="modal-content border-0 fill-white">
+
       <div class="modal-header border-0 justify-content-end align-items-end">
         <i data-feather="x" class="close pointer" data-bs-dismiss="modal"></i>
       </div>
-      <div class="modal-name">
-        <h3 class="w-100 text-center m-0">Lets talk.</h3>
+      
+      <div class="modal-name d-flex">
+        <h3 class="m-0 ms-lg-auto me-auto">Lets talk.</h3>
+        <a href="mailto:ben@benmacpherson.dev" class="d-lg-none d-inline"><i data-feather="mail" class="bm-icon primary"></i></a>
+        <a href="tel:2042267347" class="d-lg-none d-inline ms-2"><i data-feather="phone" class="bm-icon primary"></i></a>
       </div>
+      
       <div class="row m-0">
-        <div class="col d-flex flex-column pe-lg-3 pe-0 ps-0">
+        
+        <div class="col pe-lg-3 px-0">
           <div class="modal-body d-flex flex-column pe-lg-0">
             <div class="bm-floating-input-label mb-3">
               <label for="classic-contact-name">Name</label>
@@ -97,6 +150,7 @@
             <button type="button" class="btn bm-btn-primary px-5">Send</button>
           </div>
         </div>
+
         <div class="col-lg-6 d-lg-flex d-none text-center ps-3 pe-0 flex-column">
           <div class="modal-body d-flex ps-0 flex-column justify-content-between">
             <div class="position-relative" style="height: 60%; width: 100%;">
@@ -215,8 +269,7 @@
                   <i data-feather="mail" class="bm-icon tiny me-2"></i><a class="bm-link" href="mailto:ben@benmacpherson.dev">ben@benmacpherson.dev</a>
                 </div>
               </div>
-            </div>
-                
+            </div>       
           </div>
           <div class="modal-footer border-0 ps-0 justify-content-center mt-auto pb-lg-0">
             <a class="btn bm-btn-outline-primary bm-icon-btn mx-1" href="https://www.linkedin.com/in/ben-macp" target="_blank"><i data-feather="linkedin" class="bm-icon"></i></a>
@@ -224,69 +277,15 @@
             <a class="btn bm-btn-outline-primary bm-icon-btn mx-1" href="https://twitter.com/ben_macp" target="_blank"><i data-feather="twitter" class="bm-icon"></i></a>
           </div>
         </div>
+
       </div>
+
       <div class="modal-footer border-0 p-0 p-lg-4"></div>
+
     </div>
   </div>
 </div>
 
 
-<script type="text/javascript">
-$( document ).ready(function() {
-  var navbar = new Vue({
-    name: "navbar",
-    el: "#navbar",
-    data: {
-      page: "/",
-    },
-  });
-});
-
-Vue.component('navdot', {
-  template: `
-    <div id="navdot" class="d-none d-md-inline"> 
-      <svg viewBox="0 0 100 100">
-        <circle cx="50" cy="50" r="50"/>
-      </svg>
-    </div>`
-});
-
-</script>
-
-	<div class="container-fluid" style="height: 100vh">
-	<div class="d-flex h-100">
-		<div class="m-auto text-center">
-			<h1>Hi, I'm Ben.</h1>
-			<h4>Software developer, honorary caveman, conscientious douchbag.</h4>
-		</form>
-		</div>
-	</div>
-</div>
-	<div class="fixed-bottom d-flex align-items-end px-md-5 px-2 py-md-5 py-2">
-	<div class="d-flex flex-column w-auto">
-		<a class="footer-social-button mb-2 text-black" href="https://www.linkedin.com/in/ben-macp" target="_blank"><i data-feather="linkedin" class="bm-icon"></i></a>
-		<a class="footer-social-button mb-2 text-black" href="https://instagram.com/ben.macp" target="_blank"><i data-feather="instagram" class="bm-icon"></i></a>
-		<a class="footer-social-button mb-2 text-black" href="https://twitter.com/ben_macp" target="_blank"><i data-feather="twitter" class="bm-icon"></i></a>
-		<a class="footer-social-button text-black" href="https://github.com/ben-macpherson" target="_blank"><i data-feather="github" class="bm-icon"></i></a>
-	</div>
-	<small class="ms-auto text-uppercase text-end m-0">
-		Copr. 2021 Ben MacPherson<br>
-		All rights reserved
-	</small>
-</div>
-
-	<script type="text/javascript">
-		feather.replace();
-		$(document).ready(function() {
-		    $(".bm-floating-input-label input, .bm-floating-input-label textarea").focus(function() {
-		      $(this).parent().addClass('active content')
-		    })
-
-		   $(".bm-floating-input-label input, .bm-floating-input-label textarea").focusout(function() {
-		      $(this).parent().removeClass('active');
-		      if(!$(this).val()) $(this).parent().removeClass('content');
-		    })
-		})
-	</script>
 </body>
 </html>

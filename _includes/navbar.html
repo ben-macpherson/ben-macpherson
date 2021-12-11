@@ -1,20 +1,20 @@
-<nav id="navbar" class="navbar navbar-expand-md fixed-top py-md-4 navbar-light bg-transparent">
-  <div class="container-fluid px-md-5">
+<nav id="navbar" class="navbar navbar-expand-md fixed-top py-sm-4 py-3 navbar-light bg-transparent">
+  <div class="container-fluid px-sm-5 px-3">
     <a class="navbar-brand" href="#home">
-      <img src="assets/images/name.png" alt="logo" style="width: 150px">
+      <img src="assets/images/name.png" id="logo" alt="logo - Ben MacPherson">
     </a>
-    <button class="btn border-0 p-0 text-black border-none text-end navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navbar">
+    <button class="btn border-0 p-0 text-black border-none text-end navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navbar">
       <span data-feather="menu"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbar">
+    <div class="collapse navbar-collapse" id="navbar-menu">
       <ul class="navbar-nav flex-grow-1 justify-content-center align-items-end mb-2 mb-md-0 text-uppercase">
         <li class="nav-item text-center p-md-2">
           <navdot v-if="page == '/'"></navdot>
           <a class="nav-link" :class="{ 'active' : page == '/' }" href="">Home</a>
         </li>
-        <!-- <li class="d-md-none nav-item p-md-2">
+        <li class="d-md-none nav-item p-md-2">
           <a class="nav-link" :class="{ 'active' : page == 'contact' }" onclick="$('#contact').modal('show')">Contact</a>
-        </li> -->
+        </li>
         <!-- <li class="nav-item p-md-2">
           <a class="nav-link" :class="{ 'active' : page == 'about' }" href="about">About</a>
         </li> -->
@@ -36,14 +36,12 @@
           </ul>
         </li> -->
       </ul>
-      <div class="d-md-flex d-none justify-content-md-end" style="min-width: 150px;">
+      <div class="d-md-flex d-none justify-content-md-end" id="contact-button-container">
         <a class="btn btn-outline-dark px-3" onclick="$('#contact').modal('show')">Contact</a>
       </div>
     </div>
   </div>
 </nav>
-
-{% include contact.html %}
 
 <script type="text/javascript">
 $( document ).ready(function() {

@@ -66,10 +66,16 @@ h3 {
 			svg.close {
 				height: 20px;
 				width: 20px;
+				@media (max-width: 575px){
+					display: none;
+				}
 			}
 		}
 		.modal-body, .modal-name {
 			padding: 0 72px;
+			@media (max-width: 575px){
+				padding: 0 36px;
+			}
 		}
 		.modal-name {
 			display: flex;
@@ -78,6 +84,9 @@ h3 {
 		}
 		.modal-footer {
 			padding: 32px 72px;
+			@media (max-width: 575px){
+				padding: 32px 36px;
+			}
 		}
 	}
 }

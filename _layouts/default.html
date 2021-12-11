@@ -16,27 +16,20 @@
 	<!-- jquery -->
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	<!-- vuejs -->
-	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script> <!-- switch to prod -->
+	{% if jekyll.environment == "production" %}
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+	{% else %}
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+	{% endif %}
 	<!-- my css -->
 	<link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
-	<!-- my vue app -->
+	<!-- my js -->
+	<script type="module" src="/assets/js/application.js"></script>
 </head>
 <body>
 	{% include navbar.html %}
 	{{ content }}
 	{% include footer.html %}
-	<script type="text/javascript">
-		feather.replace();
-		$(document).ready(function() {
-		    $(".bm-floating-input-label input, .bm-floating-input-label textarea").focus(function() {
-		      $(this).parent().addClass('active content')
-		    })
-
-		   $(".bm-floating-input-label input, .bm-floating-input-label textarea").focusout(function() {
-		      $(this).parent().removeClass('active');
-		      if(!$(this).val()) $(this).parent().removeClass('content');
-		    })
-		})
-	</script>
+	{% include contact.html %}
 </body>
 </html>
