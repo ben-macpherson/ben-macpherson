@@ -2,6 +2,19 @@
 	width: 150px;
 }
 
+#navdot {
+	position: fixed;	
+	top: 18px;
+	svg {
+		width: 8px;
+		height: 8px;
+		fill: var(--dark);
+		position: relative;
+		right: 4px;
+	}
+}
+
+
 #contact-button-container {
 	min-width: 150px;
 }

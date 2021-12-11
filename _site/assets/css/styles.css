@@ -38,11 +38,17 @@ h3 { color: var(--dark); }
 
 .modal-backdrop.show { opacity: 0.8; }
 
+.nav-link { color: var(--primary) !important; }
+
+.nav-link.active, .nav-link:hover { color: var(--dark) !important; }
+
 .fill-primary { fill: var(--primary); background-color: var(--primary); }
 
 .fill-white { fill: var(--white); background-color: var(--white); }
 
 .primary { color: var(--primary); }
+
+.dark { color: var(--dark); }
 
 .border-dark { border-color: var(--dark); }
 
@@ -84,17 +90,23 @@ h3 { color: var(--dark); }
 
 .bm-btn-outline-primary:target, .bm-btn-outline-primary:active, .bm-btn-outline-primary:focus { box-shadow: inset 2px 2px 5px 0px var(--dark) !important; outline: none; }
 
+.bm-btn-outline-dark { color: var(--dark); border-color: var(--dark); }
+
+.bm-btn-outline-dark:hover { box-shadow: 3px 3px 4px 0px var(--dark); background-color: var(--primary); border-color: var(--primary); color: var(--white); }
+
+.bm-btn-outline-dark:target, .bm-btn-outline-dark:active, .bm-btn-outline-dark:focus { box-shadow: inset 2px 2px 5px 0px var(--dark) !important; outline: none; }
+
 #right-foot-fill path, #left-foot-fill path, #stamp-fill path { fill: var(--primary); }
-
-#navdot { position: fixed; top: 18px; }
-
-#navdot svg { width: 8px; height: 8px; fill: black; position: relative; right: 4px; }
 
 .footer-social-button { padding-left: 0; transition-property: padding-left; transition-duration: 0.3s; }
 
-.footer-social-button:hover { padding-left: 15px; }
+.footer-social-button:hover { padding-left: 15px; color: var(--primary); }
 
 #logo { width: 150px; }
+
+#navdot { position: fixed; top: 18px; }
+
+#navdot svg { width: 8px; height: 8px; fill: var(--dark); position: relative; right: 4px; }
 
 #contact-button-container { min-width: 150px; }
 

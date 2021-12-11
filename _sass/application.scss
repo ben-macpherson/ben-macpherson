@@ -97,6 +97,15 @@ h3 {
 	}
 }
 
+// nav
+
+.nav-link {
+	color: var(--primary) !important;
+	&.active, &:hover {
+		color: var(--dark) !important;
+	}
+}
+
 // ---------------- color classes --------------- \\
 
 .fill-primary {
@@ -111,6 +120,10 @@ h3 {
 
 .primary {
 	color: var(--primary);
+}
+
+.dark {
+	color: var(--dark);
 }
 
 .border-dark {
@@ -216,6 +229,21 @@ h3 {
 	&:hover {
 		box-shadow: 3px 3px 4px 0px var(--dark);	
 		background-color: var(--primary);
+		color: var(--white);
+	}
+	&:target, &:active, &:focus {
+		box-shadow: inset 2px 2px 5px 0px var(--dark) !important;
+		outline: none;	
+	}
+}
+
+.bm-btn-outline-dark {
+	color: var(--dark);
+	border-color: var(--dark);
+	&:hover {
+		box-shadow: 3px 3px 4px 0px var(--dark);	
+		background-color: var(--primary);
+		border-color: var(--primary);
 		color: var(--white);
 	}
 	&:target, &:active, &:focus {
