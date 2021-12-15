@@ -41,7 +41,7 @@ h3 {
 
 // ---------------- bootstrap adjustments --------------- \\
 
-//buttons
+// buttons
 .btn {
 	line-height: 2;
 	border-radius: 16px;
@@ -54,7 +54,7 @@ h3 {
 	color: var(--primary);
 }
 
-//modals
+// modals
 .modal {
 	.modal-content {
 		@media (max-width: 575px){
@@ -98,12 +98,16 @@ h3 {
 }
 
 // nav
-
 .nav-link {
 	color: var(--primary) !important;
 	&.active, &:hover {
 		color: var(--dark) !important;
 	}
+}
+
+// card
+.card {
+	border-radius: 10px;
 }
 
 // ---------------- color classes --------------- \\
