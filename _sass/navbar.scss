@@ -1,5 +1,5 @@
-#logo {
-	width: 150px;
+:root {
+	--navbar-edge-width: 200px;
 }
 
 #navdot {
@@ -16,5 +16,8 @@
 
 
 #contact-button-container {
-	min-width: 150px;
+	min-width: var(--navbar-edge-width);
+}
+#logo {
+	width: var(--navbar-edge-width);
 }

@@ -102,12 +102,14 @@ h3 { color: var(--dark); }
 
 .footer-social-button:hover { padding-left: 15px; color: var(--primary); }
 
-#logo { width: 150px; }
+:root { --navbar-edge-width: 200px; }
 
 #navdot { position: fixed; top: 18px; }
 
 #navdot svg { width: 8px; height: 8px; fill: var(--dark); position: relative; right: 4px; }
 
-#contact-button-container { min-width: 150px; }
+#contact-button-container { min-width: var(--navbar-edge-width); }
+
+#logo { width: var(--navbar-edge-width); }
 
 /*# sourceMappingURL=styles.css.map */
