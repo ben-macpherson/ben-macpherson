@@ -26,10 +26,23 @@
 	<!-- my js -->
 	<script type="module" src="/assets/js/application.js"></script>
 </head>
-<body>
-	{% include navbar.html %}
-	{{ content }}
-	{% include footer.html %}
+<body style="height: 100vh">
+	<div class="d-flex flex-column h-100">
+		{% include navbar.html %}
+		<div class="d-flex flex-row h-100">
+			{% include sidebar.html %}
+			<div class="h-100 w-100 d-block">
+				{{ content }}
+			</div>
+		</div>
+		
+	</div>
+	<!-- <div class="position-fixed end-0 bottom-0 d-flex px-md-5 px-sm-4 px-2 py-sm-4 py-3">
+		<small class="text-uppercase dark text-end m-0">
+			© {{ 'now' | date: "%Y" }} Ben MacPherson<br>
+			All rights reserved
+		</small>
+	</div> -->
 	{% include contact.html %}
 </body>
 </html>

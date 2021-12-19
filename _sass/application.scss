@@ -24,6 +24,7 @@
 body {
 	font-family: 'DM Sans', sans-serif;
 	background-color: var(--off-white);
+	color: var(--dark);
 }
 
 small {
@@ -35,8 +36,10 @@ textarea {
 	resize: none;
 }
 
-h3 {
-	color: var(--dark)
+h1 {
+	font-size: 30px;
+	line-height: 30px;
+	font-weight: 100;
 }
 
 // ---------------- bootstrap adjustments --------------- \\
@@ -141,6 +144,16 @@ h3 {
 }
 
 // ---------------- BM (site) css --------------- \\
+
+.bm-sidebar {
+	border-right: 1px solid var(--dark);
+	h1 {
+		writing-mode: vertical-lr;
+		transform: rotate(180deg);
+		height: fit-content;
+		margin: 0;
+	}
+}
 
 .bm-link {
 	color: var(--feldgrau);

@@ -1,5 +1,5 @@
-<nav id="navbar" class="navbar navbar-expand-md fixed-top py-sm-4 py-3 navbar-light bg-transparent">
-  <div class="container-fluid px-sm-5 px-3">
+<nav id="navbar" class="navbar navbar-expand-md py-sm-4 py-3 navbar-light bg-transparent">
+  <div class="container-fluid px-md-5 px-sm-4 px-2">
     <a class="navbar-brand" href="#home">
       <img src="assets/images/logo.svg" id="logo" alt="logo - Ben MacPherson">
     </a>
@@ -10,7 +10,11 @@
       <ul class="navbar-nav flex-grow-1 justify-content-center align-items-end mb-2 mb-md-0 text-uppercase">
         <li class="nav-item text-center p-md-2">
           <navdot v-if="page == '/'"></navdot>
-          <a class="nav-link" :class="{ 'active' : page == '/' }" href="">Home</a>
+          <a class="nav-link" :class="{ 'active' : page == '/' }" href="/">Home</a>
+        </li>
+        <li class="nav-item text-center p-md-2">
+          <navdot v-if="page == '/about.html'"></navdot>
+          <a class="nav-link" :class="{ 'active' : page == 'about' }" href="about">About</a>
         </li>
         <li class="d-md-none nav-item p-md-2">
           <a class="nav-link" :class="{ 'active' : page == 'contact' }" onclick="$('#contact').modal('show')">Contact</a>

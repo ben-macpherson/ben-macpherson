@@ -1,9 +1,10 @@
 .footer-social-button {
+	width: 30px;
 	padding-left: 0;
-	transition-property: padding-left;
+	transition-property: transform;
 	transition-duration:  0.3s;
 	&:hover {
-		padding-left: 15px;
+		transform: translateX(10px);
 		color: var(--primary)
 	}
 }
