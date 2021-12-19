@@ -104,6 +104,14 @@ h1 { font-size: 30px; line-height: 30px; font-weight: 100; }
 
 #right-foot-fill path, #left-foot-fill path, #stamp-fill path { fill: var(--primary); }
 
+#clock #side, #clock #hands path, #clock #hands ellipse { fill: var(--primary); }
+
+#locations path { fill: var(--primary); }
+
+#heart path, #electrons path { fill: var(--primary); }
+
+#cogs path { fill: var(--primary); }
+
 .footer-social-button { width: 30px; padding-left: 0; transition-property: transform; transition-duration: 0.3s; }
 
 .footer-social-button:hover { transform: translateX(10px); color: var(--primary); }

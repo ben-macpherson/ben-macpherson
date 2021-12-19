@@ -1,3 +1,23 @@
 #right-foot-fill path, #left-foot-fill path, #stamp-fill path {
 	fill: var(--primary);
 }
+
+#clock{
+	#side, #hands path, #hands ellipse {
+		fill: var(--primary);
+	}
+}
+
+#locations path{
+	fill: var(--primary);
+}
+
+#heart, #electrons {
+	path {
+		fill: var(--primary);
+	}
+}
+
+#cogs path {
+	fill: var(--primary);
+}
