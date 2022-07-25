@@ -11,6 +11,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 	<!-- feather -->
 	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 	<!-- jquery -->
@@ -24,7 +25,7 @@
 	<!-- my js -->
 	<script type="module" src="/assets/js/application.js"></script>
 </head>
-<body style="height: 100vh">
+<body class="vh-100">
 	<div class="d-flex flex-column h-100">
 		<nav id="navbar" class="navbar navbar-expand-md py-sm-4 py-3 navbar-light bg-transparent">
   <div class="container-fluid px-md-5 px-sm-4 px-2">
@@ -97,28 +98,43 @@ Vue.component('navdot', {
 
 </script>
 
-		<div class="d-flex flex-row h-100">
-			<div class="d-flex flex-column px-md-5 px-sm-4 px-2 mb-sm-4 mb-3 bm-sidebar">
-	<h1 class="text-uppercase mt-2 mb-auto">Home</h1>
+		<div class="d-flex flex-row h-100 mb-sm-4 mb-3">
+			<div class="d-flex flex-column px-md-5 px-sm-4 px-2 bm-sidebar">
+	<h2 class="text-uppercase mt-2 mb-auto h1">Home</h2>
 	<a class="footer-social-button mb-2 dark" href="https://www.linkedin.com/in/ben-macp" target="_blank"><i data-feather="linkedin" class="bm-icon"></i></a>
 	<a class="footer-social-button mb-2 dark" href="https://instagram.com/ben.macp" target="_blank"><i data-feather="instagram" class="bm-icon"></i></a>
 	<a class="footer-social-button mb-2 dark" href="https://twitter.com/ben_macp" target="_blank"><i data-feather="twitter" class="bm-icon"></i></a>
 	<a class="footer-social-button mb-2 dark" href="https://github.com/ben-macpherson" target="_blank"><i data-feather="github" class="bm-icon"></i></a>
 </div>
 			<div class="h-100 w-100 d-block px-md-5 px-sm-4 px-2">
-				<h2>Hi, I'm Ben.</h2>
-<h4>Software developer, honorary caveman, conscientious douchbag.</h4>
+				<div class="row justify-content-center h-100 d-flex flex-column flex-lg-row" id="home">
+	<div class="col-xl-4 col-lg-4 flex-grow-1 flex-lg-grow-0 pt-3 pb-0 pt-lg-5 pb-lg-5 order-2 order-lg-1">
+		<div class="w-100 h-100 bg-contain profile-image" style="background-image: url('assets/images/profile-2.png')">
+		</div>
+	</div>
+	<div class="col-lg-6 col-xxl-5 order-1 order-lg-2">
+		<div class="d-flex h-100 flex-column">
+			<div class="my-lg-auto my-0">
+				<h4>Hi, I'm Ben.</h4>
+				<h1>I'm a Software Developer</h1>
+				<h4>operating out of Winnipeg. I do other stuff that some people find interesting. You can learn more about me <a href="/about">here</a> or <a href="#contact" onclick="$('#contact').modal('show')">get in touch</a>!</h4>
+				<!-- <h5>You can read my most recent blog post here. [description]</h5> -->
+				<button class="btn bm-btn-primary px-5 mt-3" onclick="$('#contact').modal('show')">Contact</button>
+			</div>
+		</div>
+	</div>	
+</div>
+
 
 			</div>
 		</div>
-		
 	</div>
-	<!-- <div class="position-fixed end-0 bottom-0 d-flex px-md-5 px-sm-4 px-2 py-sm-4 py-3">
+	<div class="position-fixed end-0 bottom-0 d-sm-flex d-none px-md-5 px-sm-4 px-2 py-sm-4 py-3">
 		<small class="text-uppercase dark text-end m-0">
-			© 2021 Ben MacPherson<br>
-			All rights reserved
+			© 2022 Ben MacPherson<br>
+			All rights reserved<br>
 		</small>
-	</div> -->
+	</div>
 	<div class="modal" tabindex="-1" id="contact">
   <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down modal-lg">
     <div class="modal-content border-0 fill-white">

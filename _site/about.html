@@ -11,6 +11,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 	<!-- feather -->
 	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 	<!-- jquery -->
@@ -24,7 +25,7 @@
 	<!-- my js -->
 	<script type="module" src="/assets/js/application.js"></script>
 </head>
-<body style="height: 100vh">
+<body class="vh-100">
 	<div class="d-flex flex-column h-100">
 		<nav id="navbar" class="navbar navbar-expand-md py-sm-4 py-3 navbar-light bg-transparent">
   <div class="container-fluid px-md-5 px-sm-4 px-2">
@@ -97,18 +98,100 @@ Vue.component('navdot', {
 
 </script>
 
-		<div class="d-flex flex-row h-100">
-			<div class="d-flex flex-column px-md-5 px-sm-4 px-2 mb-sm-4 mb-3 bm-sidebar">
-	<h1 class="text-uppercase mt-2 mb-auto">About</h1>
+		<div class="d-flex flex-row h-100 mb-sm-4 mb-3">
+			<div class="d-flex flex-column px-md-5 px-sm-4 px-2 bm-sidebar">
+	<h2 class="text-uppercase mt-2 mb-auto h1">About</h2>
 	<a class="footer-social-button mb-2 dark" href="https://www.linkedin.com/in/ben-macp" target="_blank"><i data-feather="linkedin" class="bm-icon"></i></a>
 	<a class="footer-social-button mb-2 dark" href="https://instagram.com/ben.macp" target="_blank"><i data-feather="instagram" class="bm-icon"></i></a>
 	<a class="footer-social-button mb-2 dark" href="https://twitter.com/ben_macp" target="_blank"><i data-feather="twitter" class="bm-icon"></i></a>
 	<a class="footer-social-button mb-2 dark" href="https://github.com/ben-macpherson" target="_blank"><i data-feather="github" class="bm-icon"></i></a>
 </div>
 			<div class="h-100 w-100 d-block px-md-5 px-sm-4 px-2">
-				<div class="row h-100">
-	<div class="col h-100">
-		<div class="position-relative" style="height: auto; width: auto;">
+				<h2>Career path <a href="#career-path" class="hash" id="career-path">#</a></h2>
+
+<div class="timeline w-100 my-4 d-flex">
+	<div class="point">
+		<span class="descriptor">Geofilter<br>Studio</span>
+		<i data-feather="circle"></i>
+		<span class="day">May 2017</span>
+	</div>
+	<div class="point">
+		<span class="descriptor">Graduated<br>Highschool</span>
+		<i data-feather="circle"></i>
+		<span class="day">June 2018</span>
+	</div>
+	<div class="point">
+		<span class="descriptor">Quit<br>University</span>
+		<i data-feather="circle"></i>
+		<span class="day">June 2019</span>
+	</div>
+	<div class="point">
+		<span class="descriptor">Software<br>Dev</span>
+		<i data-feather="circle"></i>
+		<span class="day">September 2019</span>
+	</div>
+	<div class="point">
+		<span class="descriptor">Bodo<br>Health</span>
+		<i data-feather="circle"></i>
+		<span class="day">March 2020</span>
+	</div>
+	<div class="point">
+		<span class="descriptor">Launched<br>Business</span>
+		<i data-feather="circle"></i>
+		<span class="day">November 2020</span>
+	</div>
+	<div class="point">
+		<span class="descriptor">Left Mom's<br>Basement</span>
+		<i data-feather="circle"></i>
+		<span class="day">May 2021</span>
+	</div>
+	<div class="point">
+		<span class="descriptor">New<br>Trajectory</span>
+		<i data-feather="circle"></i>
+		<span class="day">April 2022</span>
+	</div>
+</div>
+
+<!--  <div class="w-100 row mb-3 folder">
+	<div class="d-flex col-lg-5 col-md-9 align-items-center px-3 py-2 tab">
+		<div class="bm-giant-number me-3">01</span>
+		Day to day<br>
+		My favorite days are regular days
+	</div>
+	<div class="arm col"></div>
+</div>
+<div class="w-100 row mb-3 folder">
+	<div class="d-flex col-lg-5 col-md-9 align-items-center px-3 py-2 tab">
+		<span class="bm-giant-number me-3">02</span>
+		Career path<br>
+		"Escaping competition through authenticity"
+	</div>
+	<div class="arm col"></div>
+</div>
+<div class="w-100 row mb-3 folder">
+	<div class="d-flex col-lg-5 col-md-9 align-items-center px-3 py-2 tab">
+		<span class="bm-giant-number me-3">03</span>
+		Core values<br>
+		He who has a why…
+	</div>
+	<div class="arm col"></div>
+</div>
+<div class="w-100 row mb-3 folder">
+	<div class="d-flex col-lg-5 col-md-9 align-items-center px-3 py-2 tab">
+		<span class="bm-giant-number me-3">04</span>
+		Education<br>
+		Aggressively experiential
+	</div>
+	<div class="arm col"></div>
+</div> -->
+
+<!-- 
+<div class="row">
+	<div class="col-md-5 col">
+		<ul class="list-group list-group-flush">
+			<li class="list-group-item list-group-item-action pointer">
+				<div class="d-flex align-items-center">
+					<div class="position-relative" style="height: auto; width: 50%;">
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg width="100%" height="100%" viewBox="0 0 100 100" version="1.1" id="clock" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
@@ -166,10 +249,14 @@ Vue.component('navdot', {
         </g>
     </g>
 </svg>
-</div>	
-	</div>
-	<div class="col h-100">
-		<div class="position-relative" style="height: auto; width: auto;">
+</div>
+					<h3 class="d-inline-block w-100 ms-4">Stuff I do</h3>
+					<i data-feather="chevron-right" class="bm-icon"></i>
+				</div>
+			</li>
+			<li class="list-group-item list-group-item-action pointer">
+				<div class="d-flex align-items-center">
+					<div class="position-relative" style="height: auto; width: 50%;">
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
@@ -196,10 +283,14 @@ Vue.component('navdot', {
         </g>
     </g>
 </svg>
-</div>	
-	</div>
-	<div class="col h-100">
-		<div class="position-relative" style="height: auto; width: auto;">
+</div>
+					<h3 class="d-inline-block w-100 ms-4">Career path</h3>
+					<i data-feather="chevron-right" class="bm-icon"></i>
+				</div>
+			</li>
+			<li class="list-group-item list-group-item-action pointer">
+				<div class="d-flex align-items-center">
+					<div class="position-relative" style="height: auto; width: 50%;">
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg width="100%" height="100%" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
@@ -229,10 +320,14 @@ Vue.component('navdot', {
         </g>
     </g>
 </svg>
-</div>	
-	</div>
-	<div class="col h-100">
-		<div class="position-relative" style="height: auto; width: auto;">
+</div>
+					<h3 class="d-inline-block w-100 ms-4">Core values</h3>
+					<i data-feather="chevron-right" class="bm-icon"></i>
+				</div>
+			</li>
+			<li class="list-group-item list-group-item-action pointer">
+				<div class="d-flex align-items-center">
+					<div class="position-relative" style="height: auto; width: 50%;">
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg width="100%" height="100%" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
@@ -251,20 +346,24 @@ Vue.component('navdot', {
         </g>
     </g>
 </svg>
-</div>	
+</div>
+					<h3 class="d-inline-block w-100 ms-4">Education</h3>
+					<i data-feather="chevron-right" class="bm-icon"></i>
+				</div>
+			</li>
+		</ul>
 	</div>
 </div>
-
+ -->
 			</div>
 		</div>
-		
 	</div>
-	<!-- <div class="position-fixed end-0 bottom-0 d-flex px-md-5 px-sm-4 px-2 py-sm-4 py-3">
+	<div class="position-fixed end-0 bottom-0 d-sm-flex d-none px-md-5 px-sm-4 px-2 py-sm-4 py-3">
 		<small class="text-uppercase dark text-end m-0">
-			© 2021 Ben MacPherson<br>
-			All rights reserved
+			© 2022 Ben MacPherson<br>
+			All rights reserved<br>
 		</small>
-	</div> -->
+	</div>
 	<div class="modal" tabindex="-1" id="contact">
   <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down modal-lg">
     <div class="modal-content border-0 fill-white">

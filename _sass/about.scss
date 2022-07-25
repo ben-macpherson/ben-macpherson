@@ -1,0 +1,23 @@
+.timeline {
+	border-bottom: 1px solid black;
+	.point {
+		width: 100%;
+		position: relative;
+		top: 35px;
+		text-align: center;
+		svg {
+			
+			fill: var(--off-white);
+		}
+		.day {
+			display: block;
+		}
+		.descriptor {
+			position: absolute;
+		    bottom: 100%;
+		    transform: rotate(-45deg);
+		    display: block;
+		    left: 45%;
+		}
+	}
+}

@@ -21,10 +21,18 @@
 
 // ---------------- tag adjustments --------------- \\
 
+body, button {
+	font-family: 'Roboto', sans-serif;
+	letter-spacing: 0.75px;
+}
+
 body {
-	font-family: 'DM Sans', sans-serif;
 	background-color: var(--off-white);
 	color: var(--dark);
+}
+
+a {
+	color: var(--dark)
 }
 
 small {
@@ -37,12 +45,45 @@ textarea {
 }
 
 h1 {
-	font-size: 30px;
-	line-height: 30px;
-	font-weight: 100;
+	font-family: 'Lora', serif;
+	font-size: 50px;
+}
+
+h2:not(.h1) {
+	a.hash {
+		color: #00000080;
+		text-decoration: none;
+	}
+}
+
+h4, h5 {
+	font-weight: 400;
 }
 
 // ---------------- bootstrap adjustments --------------- \\
+
+// list groups
+
+.list-group {
+	.list-group-item-action {
+		background-color: var(--off-white);
+		border-color: var(--light-primary);
+		&:hover {
+			background-color: var(--light-primary);
+			border-radius: 10px;
+			border: none;
+		}
+	}
+	.list-group-item-action:not(:hover) + .list-group-item-action:hover {
+		border:none;
+	}
+}
+
+.bg-contain {
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
 
 // buttons
 .btn {
@@ -60,7 +101,7 @@ h1 {
 // modals
 .modal {
 	.modal-content {
-		@media (max-width: 575px){
+		@media (max-width: 575.98px){
 			border-radius: 0;
 		}
 		border-radius: 32px;
@@ -69,14 +110,14 @@ h1 {
 			svg.close {
 				height: 20px;
 				width: 20px;
-				@media (max-width: 575px){
+				@media (max-width: 575.98px){
 					display: none;
 				}
 			}
 		}
 		.modal-body, .modal-name {
 			padding: 0 72px;
-			@media (max-width: 575px){
+			@media (max-width: 575.98px){
 				padding: 0 36px;
 			}
 		}
@@ -87,7 +128,7 @@ h1 {
 		}
 		.modal-footer {
 			padding: 32px 72px;
-			@media (max-width: 575px){
+			@media (max-width: 575.98px){
 				padding: 32px 36px;
 			}
 		}
@@ -105,6 +146,12 @@ h1 {
 	color: var(--primary) !important;
 	&.active, &:hover {
 		color: var(--dark) !important;
+	}
+}
+
+.navbar-collapse {
+	@media (max-width: 767.98px){
+		border-bottom: 1px solid var(--dark);
 	}
 }
 
@@ -147,11 +194,14 @@ h1 {
 
 .bm-sidebar {
 	border-right: 1px solid var(--dark);
-	h1 {
+	h2 {
 		writing-mode: vertical-lr;
 		transform: rotate(180deg);
 		height: fit-content;
 		margin: 0;
+		font-size: 30px;
+		line-height: 30px;
+		font-weight: 100;
 	}
 }
 
@@ -170,6 +220,12 @@ h1 {
 		height: 14px;
 		width: 14px;
 	}
+}
+
+.bm-giant-number {
+	display: block;
+	font-size: 65px;
+	line-height: 65px;
 }
 
 .bm-floating-input-label {
@@ -268,3 +324,15 @@ h1 {
 		outline: none;	
 	}
 }
+
+// needed tweaks for this specific set of pages
+#home .profile-image{
+	max-width: 450px;
+	background-position: center;
+	margin-left: auto;
+	@media (max-width: 991.98px){
+		background-position: left top;
+		margin-left: 0;
+	}
+}
+

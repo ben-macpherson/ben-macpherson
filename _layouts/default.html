@@ -11,6 +11,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 	<!-- feather -->
 	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 	<!-- jquery -->
@@ -26,23 +27,22 @@
 	<!-- my js -->
 	<script type="module" src="/assets/js/application.js"></script>
 </head>
-<body style="height: 100vh">
+<body class="vh-100">
 	<div class="d-flex flex-column h-100">
 		{% include navbar.html %}
-		<div class="d-flex flex-row h-100">
+		<div class="d-flex flex-row h-100 mb-sm-4 mb-3">
 			{% include sidebar.html %}
 			<div class="h-100 w-100 d-block px-md-5 px-sm-4 px-2">
 				{{ content }}
 			</div>
 		</div>
-		
 	</div>
-	<!-- <div class="position-fixed end-0 bottom-0 d-flex px-md-5 px-sm-4 px-2 py-sm-4 py-3">
+	<div class="position-fixed end-0 bottom-0 d-sm-flex d-none px-md-5 px-sm-4 px-2 py-sm-4 py-3">
 		<small class="text-uppercase dark text-end m-0">
 			© {{ 'now' | date: "%Y" }} Ben MacPherson<br>
-			All rights reserved
+			All rights reserved<br>
 		</small>
-	</div> -->
+	</div>
 	{% include contact.html %}
 </body>
 </html>
