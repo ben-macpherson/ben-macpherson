@@ -2,117 +2,222 @@
 title: "About"
 ---
 
-<h2>Career path <a href="#career-path" class="hash" id="career-path">#</a></h2>
+<div class="container-xl ms-0" id="about">
 
-<div class="timeline w-100 my-4 d-flex">
-	<div class="point">
-		<span class="descriptor">Geofilter<br>Studio</span>
-		<i data-feather="circle"></i>
-		<span class="day">May 2017</span>
+	<div class="row justify-content-sm-start justify-content-center mb-5">
+		<div class="col-xl-2 col-md-3 col-sm-4 col-3">
+			<div class="d-flex flex-column justify-content-center h-100">
+				<img src="assets/images/diamond.png" alt="diamond" class="w-100">	
+			</div>
+		</div>
+		<div class="col-xl-7 col-lg-8 col-md-7 col-sm-7">
+			<div class="d-flex flex-column h-100 justify-content-center text-center text-sm-start">
+				<h1 class="mb-1">Escaping competition through authenticity.</h1>
+				<small>(Naval)</small>
+			</div>
+		</div>
 	</div>
-	<div class="point">
-		<span class="descriptor">Graduated<br>Highschool</span>
-		<i data-feather="circle"></i>
-		<span class="day">June 2018</span>
+
+
+	<div class="row">
+		<div class="col-2 d-xl-block d-none">
+			<div class="h-100 d-flex flex-column">
+				<h2>Who's Ben?</h2>
+				<img src="assets/images/bullet.png" alt="bullet" class="w-100 my-auto">
+			</div>
+		</div>
+		<div class="col-lg-6 col-xl-4">
+			<h3>Soft skills</h3>
+			<ul>
+				<li>Fast, hands-on learner</li>
+				<li>Fast paced, logic focused programmer</li>
+				<li>Good time magement skills</li>
+				<li>Highly adaptable and competative</li>
+				<li>Self affirming</li>
+				<li>Strong, assertive communicator</li>
+				<li>Well practiced at designing elegant code</li>
+			</ul>
+			<h3>Personality</h3>
+			<ul>
+				<li>Achievement oriented</li>
+				<li>Conscientious, industrious, orderly</li>
+				<li>Extraordinarily uncomforable with inactivity</li>
+				<li>Naturally creative</li>
+				<li>Recognizes personal growth</li>
+				
+			</ul>
+		</div>
+		<div class="col-lg-6 col-xl-4">
+			<div class="d-flex justify-content-between align-items-center">
+				<h3>Hard skills</h3>
+				<span class="bm-link td-underline pointer" @click="whos_ben_expanded = !whos_ben_expanded">expand</span>
+			</div>
+			<ul>
+				<li>Programming/Web development
+					<ul>
+						<li>Advanced knowledge of<span v-show="!whos_ben_expanded">
+							HTML, CSS, JavaScript, Ruby on Rails	
+						</span><span v-show="whos_ben_expanded">:
+								<ul>
+									<li>HTML & CSS</li>
+									<li>JavaScript
+										<ul>
+											<li>React</li>
+											<li>VueJS</li>
+											<li>jQuery</li>
+											<li>NodeJS</li>
+											<li>Three.js</li>
+										</ul>
+									</li>
+									<li>Advanced Ruby on Rails knowledge</li>
+								</ul>
+							</span>
+						</li>
+						<li>Experience with PostgrSQL, MySQL, MongoDB</li>
+						<li v-show="!whos_ben_expanded">Experience with many backend languages</li>
+						<li v-show="whos_ben_expanded">Experience with:
+							<ul>
+								<li>NodeJS</li>
+								<li>PHP</li>
+								<li>Swift</li>
+								<li>c++,</li>
+								<li>c</li>
+								<li>Java</li>
+							</ul>
+						</li>
+						<li>Knowledge of Ubuntu, Apache, Passenger</li>
+					</ul>
+				</li>
+				<li>Other pertinent software
+					<ul>
+						<li>Basic photoshop skillset</li>
+						<li>Experience using Figma</li>
+						<li>Advanced knowledge of Wordpress</li>
+						<li>Experience working with Final Cut Pro</li>
+						<li>Proficient in Microsoft office suite</li>	
+					</ul>
+				</li>
+			</ul>
+		</div>
 	</div>
-	<div class="point">
-		<span class="descriptor">Quit<br>University</span>
-		<i data-feather="circle"></i>
-		<span class="day">June 2019</span>
+	
+	<!-- <div class="row">
+		<div class="col-2">
+			<div class="h-100 d-flex flex-column">
+				<h2>What does Ben do?</h2>
+			</div>
+		</div>
+		<div class="col-6">
+			<h3>Life</h3>
+		</div>
+		<div class="col-6">
+			<h3>Work</h3>
+		</div>
+	</div> -->
+
+	<h2 class="text-center text-md-start">Professional Values</h2>
+	<div class="row justify-content-md-start justify-content-center">
+		<div class="col-lg-3 col-md-6 col-sm-8 col-12 text-center">
+			<div class="d-flex flex-column h-100">
+				<img src="assets/images/handshake.png" alt="handshake" class="w-50 mx-auto">
+				<h5 class="py-3 px-1">Business and <b>wealth creation</b> is not a <b>zero-sum game</b>.</h5>	
+			</div>
+		</div>
+		<div class="col-lg-3 col-md-6 col-sm-8 col-12 text-center">
+			<div class="h-100 d-flex flex-column h-100">
+				<img src="assets/images/folder.png" alt="folder" class="w-50 mx-auto">
+				<h5 class="py-3 px-1">A high priority around <b>organization</b> maximizes potential for <b>success</b>.</h5>
+			</div>
+		</div>
+		<div class="col-lg-3 col-md-6 col-sm-8 col-12 text-center">
+			<div class="h-100 d-flex flex-column h-100">
+				<img src="assets/images/lightbulb.png" alt="lightbulb" class="w-50 mx-auto">
+				<h5 class="py-3 px-1"><b>Creative</b> stimulation and <b>idea</b> exploration should be central to ones daily process.</h5>
+			</div>
+		</div>
+		<div class="col-lg-3 col-md-6 col-sm-8 col-12 text-center">
+			<div class="h-100 d-flex flex-column h-100">
+				<img src="assets/images/individual.png" alt="individual" class="w-50 mx-auto">
+				<h5 class="py-3 px-1">Individual <b>accountibility</b> is maximized by working in small groups and benefits all parties.</h5>
+			</div>
+		</div>
 	</div>
-	<div class="point">
-		<span class="descriptor">Software<br>Dev</span>
-		<i data-feather="circle"></i>
-		<span class="day">September 2019</span>
+
+	<h2 class="text-center text-md-start">Continuous Goals</h2>
+	<div id="stickies">
+		<div class="row g-0 justify-content-sm-start justify-content-center">
+		  <div class="col col-xl-2 col-lg-3 col-md-4 col-sm-6 col-9">
+		  	<div class="dummy"></div>
+		    <span class="content d-block py-2 px-3 m-md-3 m-sm-4 m-4">
+		      Master the everyday process with grace and balance.
+		    </span>
+		  </div>
+		  <div class="col col-xl-2 col-lg-3 col-md-4 col-sm-6 col-9">
+		  	<div class="dummy"></div>
+		    <span class="content d-block py-2 px-3 m-md-3 m-sm-4 m-4">
+		      Improve design skill to match development ability.
+		    </span>
+		  </div>
+		  <div class="col col-xl-2 col-lg-3 col-md-4 col-sm-6 col-9">
+		  	<div class="dummy"></div>
+		    <span class="content d-block py-2 px-3 m-md-3 m-sm-4 m-4">
+		      Practice inner peace through wisdom.
+		    </span>
+		  </div>
+		  <div class="col col-xl-2 col-lg-3 col-md-4 col-sm-6 col-9">
+		  	<div class="dummy"></div>
+		    <span class="content d-block py-2 px-3 m-md-3 m-sm-4 m-4">
+		      Actively practice creativity to reconnect.
+		    </span>
+		  </div>
+		  <div class="col col-xl-2 col-lg-3 col-md-4 col-sm-6 col-9">
+		  	<div class="dummy"></div>
+		    <span class="content d-block py-2 px-3 m-md-3 m-sm-4 m-4">
+		      Build software that doesn't cause harm.
+		    </span>
+		  </div>
+		  <div class="col col-xl-2 col-lg-3 col-md-4 col-sm-6 col-9">
+		  	<div class="dummy"></div>
+		    <span class="content d-block py-2 px-3 m-md-3 m-sm-4 m-4">
+		      Work along side like minded people
+		    </span>
+		  </div>
+		  <div class="col col-xl-2 col-lg-3 col-md-4 col-sm-6 col-9">
+		  	<div class="dummy"></div>
+		    <span class="content d-block py-2 px-3 m-md-3 m-sm-4 m-4">
+		      Continuously improve my workspace
+		    </span>
+		  </div>
+		  <div class="col col-xl-2 col-lg-3 col-md-4 col-sm-6 col-9">
+		  	<div class="dummy"></div>
+		    <span class="content d-block py-2 px-3 m-md-3 m-sm-4 m-4">
+		      Learn to take more strategic breaks.
+		    </span>
+		  </div>
+		  <div class="col col-xl-2 col-lg-3 col-md-4 col-sm-6 col-9">
+		  	<div class="dummy"></div>
+		    <span class="content d-block py-2 px-3 m-md-3 m-sm-4 m-4">
+		      Delegate with care.
+		    </span>
+		  </div>
+		  <div class="col col-xl-2 col-lg-3 col-md-4 col-sm-6 col-9">
+		  	<div class="dummy"></div>
+		    <span class="content d-block py-2 px-3 m-md-3 m-sm-4 m-4">
+		      Constantly develop my career and skillset.
+		    </span>
+		  </div>
+		</div>
 	</div>
-	<div class="point">
-		<span class="descriptor">Bodo<br>Health</span>
-		<i data-feather="circle"></i>
-		<span class="day">March 2020</span>
-	</div>
-	<div class="point">
-		<span class="descriptor">Launched<br>Business</span>
-		<i data-feather="circle"></i>
-		<span class="day">November 2020</span>
-	</div>
-	<div class="point">
-		<span class="descriptor">Left Mom's<br>Basement</span>
-		<i data-feather="circle"></i>
-		<span class="day">May 2021</span>
-	</div>
-	<div class="point">
-		<span class="descriptor">New<br>Trajectory</span>
-		<i data-feather="circle"></i>
-		<span class="day">April 2022</span>
-	</div>
+
 </div>
 
-<!--  <div class="w-100 row mb-3 folder">
-	<div class="d-flex col-lg-5 col-md-9 align-items-center px-3 py-2 tab">
-		<div class="bm-giant-number me-3">01</span>
-		Day to day<br>
-		My favorite days are regular days
-	</div>
-	<div class="arm col"></div>
-</div>
-<div class="w-100 row mb-3 folder">
-	<div class="d-flex col-lg-5 col-md-9 align-items-center px-3 py-2 tab">
-		<span class="bm-giant-number me-3">02</span>
-		Career path<br>
-		"Escaping competition through authenticity"
-	</div>
-	<div class="arm col"></div>
-</div>
-<div class="w-100 row mb-3 folder">
-	<div class="d-flex col-lg-5 col-md-9 align-items-center px-3 py-2 tab">
-		<span class="bm-giant-number me-3">03</span>
-		Core values<br>
-		He who has a why…
-	</div>
-	<div class="arm col"></div>
-</div>
-<div class="w-100 row mb-3 folder">
-	<div class="d-flex col-lg-5 col-md-9 align-items-center px-3 py-2 tab">
-		<span class="bm-giant-number me-3">04</span>
-		Education<br>
-		Aggressively experiential
-	</div>
-	<div class="arm col"></div>
-</div> -->
-
-<!-- 
-<div class="row">
-	<div class="col-md-5 col">
-		<ul class="list-group list-group-flush">
-			<li class="list-group-item list-group-item-action pointer">
-				<div class="d-flex align-items-center">
-					{% include svgs/clock.html height="auto" width="50%" %}
-					<h3 class="d-inline-block w-100 ms-4">Stuff I do</h3>
-					<i data-feather="chevron-right" class="bm-icon"></i>
-				</div>
-			</li>
-			<li class="list-group-item list-group-item-action pointer">
-				<div class="d-flex align-items-center">
-					{% include svgs/path.html height="auto" width="50%" %}
-					<h3 class="d-inline-block w-100 ms-4">Career path</h3>
-					<i data-feather="chevron-right" class="bm-icon"></i>
-				</div>
-			</li>
-			<li class="list-group-item list-group-item-action pointer">
-				<div class="d-flex align-items-center">
-					{% include svgs/atom.html height="auto" width="50%" %}
-					<h3 class="d-inline-block w-100 ms-4">Core values</h3>
-					<i data-feather="chevron-right" class="bm-icon"></i>
-				</div>
-			</li>
-			<li class="list-group-item list-group-item-action pointer">
-				<div class="d-flex align-items-center">
-					{% include svgs/brain.html height="auto" width="50%" %}
-					<h3 class="d-inline-block w-100 ms-4">Education</h3>
-					<i data-feather="chevron-right" class="bm-icon"></i>
-				</div>
-			</li>
-		</ul>
-	</div>
-</div>
- -->
+<script type="text/javascript">
+  $( document ).ready(function() {
+    about_vue = new Vue({
+      el: "#about",
+      data: {
+      	whos_ben_expanded: false,
+      },
+    });
+  });
+</script>

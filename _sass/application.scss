@@ -17,6 +17,7 @@
 	--dark: var(--dark-jungle-green);
 	--off-white: var(--floral-white);
 	--white: var(--baby-powder);
+	--red: var(--flame)
 }
 
 // ---------------- tag adjustments --------------- \\
@@ -32,7 +33,10 @@ body {
 }
 
 a {
-	color: var(--dark)
+	color: var(--dark);
+	&:hover {
+		color: var(--red)
+	}
 }
 
 small {
@@ -47,6 +51,9 @@ textarea {
 h1 {
 	font-family: 'Lora', serif;
 	font-size: 50px;
+	@media (max-width: 575.98px){
+		font-size: 30px;
+	}
 }
 
 h2:not(.h1) {
@@ -96,6 +103,10 @@ h4, h5 {
 
 .btn-link, .btn-link:hover, .btn-link:active, .btn-link:focus {
 	color: var(--primary);
+}
+
+.td-underline {
+	text-decoration: underline;
 }
 
 // modals
@@ -324,15 +335,3 @@ h4, h5 {
 		outline: none;	
 	}
 }
-
-// needed tweaks for this specific set of pages
-#home .profile-image{
-	max-width: 450px;
-	background-position: center;
-	margin-left: auto;
-	@media (max-width: 991.98px){
-		background-position: left top;
-		margin-left: 0;
-	}
-}
-

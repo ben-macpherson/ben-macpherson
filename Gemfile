@@ -1,4 +1,5 @@
 source "https://rubygems.org"
+ruby '2.7.0'
 gem "jekyll", "~> 4.2.1"
 gem "minima", "~> 2.5"
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
