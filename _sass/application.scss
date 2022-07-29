@@ -209,12 +209,12 @@ h4, h5 {
 	border-right: 1px solid var(--dark);
 	position: sticky;
 	top: 1rem;
-	height: calc(100vh - 65.83px - 2rem + min(var(--scroll-offset), calc(65.83px + 0rem)));
+	height: calc(100vh - 65.83px - 2rem + min(var(--scroll-offset), calc(65.83px)));
 	@media (min-width: 576px) {
-		height: calc(100vh - 65.83px - 3rem + min(var(--scroll-offset), calc(65.83px + 0rem)));
+		height: calc(100vh - 65.83px - 3rem + min(var(--scroll-offset), calc(65.83px)));
 		top: 1.5rem;
 	}
-	@media (min-width: 768px) { height: calc(100vh - 70px - 3rem + min(var(--scroll-offset), calc(70px + 0rem))); }
+	@media (min-width: 768px) { height: calc(100vh - 70px - 3rem + min(var(--scroll-offset), calc(70px))); }
 	h2 {
 		writing-mode: vertical-lr;
 		transform: rotate(180deg);
@@ -344,4 +344,8 @@ h4, h5 {
 		box-shadow: inset 2px 2px 5px 0px var(--dark) !important;
 		outline: none;	
 	}
+}
+
+.bm-snackbar {
+	font-family: 'Roboto', sans-serif;
 }

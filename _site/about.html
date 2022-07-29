@@ -25,6 +25,8 @@
 	<link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
 	<!-- my js -->
 	<script type="module" src="/assets/js/application.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/node-snackbar@latest/src/js/snackbar.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/node-snackbar@latest/dist/snackbar.min.css" />
 </head>
 <body class="min-vh-100">
 	<main class="d-flex flex-column h-100">
@@ -111,7 +113,6 @@ Vue.component('navdot', {
 <script type="text/javascript">
 	var css_root = document.querySelector(':root');
 	$(window).scroll(function(e) {
-		console.log("window.scrollY", window.scrollY);
 		css_root.style.setProperty('--scroll-offset', window.scrollY + "px");
 	})
 </script>
@@ -358,28 +359,27 @@ Vue.component('navdot', {
       </div>
       
       <div class="row m-0">
-        
         <div class="col pe-lg-4 px-0">
           <div class="modal-body d-flex flex-column pe-lg-0">
             <div class="bm-floating-input-label mb-3">
               <label for="classic-contact-name">Your name</label>
-              <input type="text" email="name" id="classic-contact-name">
+              <input type="fname" v-model="name" id="classic-contact-name">
             </div>
             <div class="bm-floating-input-label mb-3">
               <label for="classic-contact-email">Email / Phone</label>
-              <input type="email" name="email" id="classic-contact-email">
+              <input type="email" v-model="email" id="classic-contact-email">
             </div>
             <div class="bm-floating-input-label h-100">
               <label for="classic-contact-email">Message</label>
-              <textarea name="message" id="class-contact-message" rows="5"></textarea>
+              <textarea v-model="message" id="class-contact-message" rows="5"></textarea>
             </div>
           </div>
           <div class="modal-footer border-0 justify-content-center mt-auto pb-5 pb-lg-0 pe-lg-0">
             <button type="button" class="btn btn-link bm-link" data-bs-dismiss="modal">Cancel</button>
-            <button type="button" class="btn bm-btn-primary px-5">Send</button>
+            <button type="button" class="btn bm-btn-primary px-5" @click="submit()">Send</button>
           </div>
         </div>
-
+          
         <div class="col-lg-6 d-lg-flex d-none text-center ps-4 pe-0 flex-column">
           <div class="modal-body d-flex ps-0 flex-column justify-content-between">
             <div class="position-relative" style="height: 60%; width: 100%;">
@@ -515,6 +515,47 @@ Vue.component('navdot', {
   </div>
 </div>
 
+<script type="text/javascript">
+  $( document ).ready(function() {
+    contact_vue = new Vue({
+      el: "#contact",
+      data: {
+        name: "",
+        email: "",
+        message: "",
+      },
+      methods: {
+        submit(){
+          let data = {
+            name: this.name,
+            email: this.email,
+            message: this.message
+          }
+          let vue = this;
+          $.ajax({
+            url: "https://getform.io/f/9da00561-d9a7-4a93-baff-1017902bcbb9",
+            method: "POST",
+            data: data,
+            success(){
+              vue.clearForm();
+              $(".modal").modal('hide');
+              Snackbar.show({pos: 'bottom-right', text: "Form submitted. I'll get back to you soon.", showAction: false, backgroundColor: "var(--dark-jungle-green)", textColor: "var(--cultured)", customClass: "bm-snackbar"});
+            },
+            error(){
+              vue.clearForm();
+              Snackbar.show({pos: 'bottom-right', text: "There was an error submitting the form. Please try again soon.", showAction: false, backgroundColor: "var(--cultured)", textColor: "var(--flame)", customClass: "bm-snackbar"});
+            }
+          })
+        },
+        clearForm(){
+          this.$set(this, "name", "");
+          this.$set(this, "email", "");
+          this.$set(this, "message", "");
+        }
+      },
+    });
+  });
+</script>
 
 </body>
 </html>

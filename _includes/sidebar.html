@@ -9,7 +9,6 @@
 <script type="text/javascript">
 	var css_root = document.querySelector(':root');
 	$(window).scroll(function(e) {
-		console.log("window.scrollY", window.scrollY);
 		css_root.style.setProperty('--scroll-offset', window.scrollY + "px");
 	})
 </script>
