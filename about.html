@@ -2,9 +2,9 @@
 title: "About"
 ---
 
-<div class="container-xl ms-0" id="about">
+<div class="container-xl ms-0 pb-5" id="about">
 
-	<div class="row justify-content-sm-start justify-content-center mb-5">
+	<div class="row justify-content-sm-start justify-content-center mb-5 pb-3">
 		<div class="col-xl-2 col-md-3 col-sm-4 col-3">
 			<div class="d-flex flex-column justify-content-center h-100">
 				<img src="assets/images/diamond.png" alt="diamond" class="w-100">	
@@ -18,15 +18,22 @@ title: "About"
 		</div>
 	</div>
 
+	<div class="my-5 py-lg-4">
+		<h4 class="mb-3">Hi I'm Ben,</h4>
+		<h4 class="mb-3">I am a <b>software developer</b> based out of <b>Winnipeg</b>, Canada. I've had a lifelong facination with making stuff. Programming started out as a passion project and has turned into my career<span v-show="!intro_expanded">…</span><span v-show="intro_expanded">. I have a passion for working with <b>small teams</b> on <b>big projects</b>, this lends well to the fact that I've spent much of my career at startups.</h4>
+		<h4 v-show="intro_expanded" class="mb-3">Outside of programming, I am an avid <b>camper and hiker</b>, a casual <b>gamer</b>, I can grow a pretty incredible <b>afro</b>, I'm a <b>Fleetwood Mac</b> fan, and an aspiring <b>"maker"</b>.</span></h4>
+		<h4 v-show="intro_expanded" class="mb-3"><i>This site is a work in progress.</i> Come back soon for more!</h4>
+		<button type="button" v-show="!intro_expanded" class="btn bm-btn-primary btn-md-lg px-4" @click="intro_expanded = true">Read more…</button>
+	</div>
 
-	<div class="row">
-		<div class="col-2 d-xl-block d-none">
+	<div class="row my-5 py-lg-4">
+		<div class="col-3  d-xl-block d-none">
 			<div class="h-100 d-flex flex-column">
 				<h2>Who's Ben?</h2>
-				<img src="assets/images/bullet.png" alt="bullet" class="w-100 my-auto">
+				<img src="assets/images/bullet.png" alt="bullet" class="w-75  my-auto">
 			</div>
 		</div>
-		<div class="col-lg-6 col-xl-4">
+		<div class="col-lg-6 col-xl-4 order-2 order-lg-1">
 			<h3>Soft skills</h3>
 			<ul>
 				<li>Fast, hands-on learner</li>
@@ -47,10 +54,10 @@ title: "About"
 				
 			</ul>
 		</div>
-		<div class="col-lg-6 col-xl-4">
+		<div class="col-lg-6 col-xl-4 order-1 order-lg-2">
 			<div class="d-flex justify-content-between align-items-center">
-				<h3>Hard skills</h3>
-				<span class="bm-link td-underline pointer" @click="whos_ben_expanded = !whos_ben_expanded">expand</span>
+				<h3 class="m-0">Hard skills</h3>
+				<button type="button" class="btn bm-btn-outline-dark btn-sm" @click="whos_ben_expanded = true" v-show="!whos_ben_expanded">Expand</button>
 			</div>
 			<ul>
 				<li>Programming/Web development
@@ -100,112 +107,102 @@ title: "About"
 			</ul>
 		</div>
 	</div>
-	
-	<!-- <div class="row">
-		<div class="col-2">
-			<div class="h-100 d-flex flex-column">
-				<h2>What does Ben do?</h2>
-			</div>
-		</div>
-		<div class="col-6">
-			<h3>Life</h3>
-		</div>
-		<div class="col-6">
-			<h3>Work</h3>
-		</div>
-	</div> -->
 
-	<h2 class="text-center text-md-start">Professional Values</h2>
-	<div class="row justify-content-md-start justify-content-center">
-		<div class="col-lg-3 col-md-6 col-sm-8 col-12 text-center">
-			<div class="d-flex flex-column h-100">
-				<img src="assets/images/handshake.png" alt="handshake" class="w-50 mx-auto">
-				<h5 class="py-3 px-1">Business and <b>wealth creation</b> is not a <b>zero-sum game</b>.</h5>	
+	<div class="my-5 py-lg-4 pe-4">
+		<h2 class="text-center text-md-start">Professional Values</h2>
+		<div class="row justify-content-md-start justify-content-center">
+			<div class="col-lg-3 col-md-6 col-sm-8 col-12 text-center">
+				<div class="d-flex flex-column h-100">
+					<img src="assets/images/handshake.png" alt="handshake" class="w-50 mx-auto">
+					<h5 class="py-3 px-1">Business and <b>wealth creation</b> is not a <b>zero-sum game</b>.</h5>	
+				</div>
 			</div>
-		</div>
-		<div class="col-lg-3 col-md-6 col-sm-8 col-12 text-center">
-			<div class="h-100 d-flex flex-column h-100">
-				<img src="assets/images/folder.png" alt="folder" class="w-50 mx-auto">
-				<h5 class="py-3 px-1">A high priority around <b>organization</b> maximizes potential for <b>success</b>.</h5>
+			<div class="col-lg-3 col-md-6 col-sm-8 col-12 text-center">
+				<div class="h-100 d-flex flex-column h-100">
+					<img src="assets/images/folder.png" alt="folder" class="w-50 mx-auto">
+					<h5 class="py-3 px-1">A high priority around <b>organization</b> maximizes potential for <b>success</b>.</h5>
+				</div>
 			</div>
-		</div>
-		<div class="col-lg-3 col-md-6 col-sm-8 col-12 text-center">
-			<div class="h-100 d-flex flex-column h-100">
-				<img src="assets/images/lightbulb.png" alt="lightbulb" class="w-50 mx-auto">
-				<h5 class="py-3 px-1"><b>Creative</b> stimulation and <b>idea</b> exploration should be central to ones daily process.</h5>
+			<div class="col-lg-3 col-md-6 col-sm-8 col-12 text-center">
+				<div class="h-100 d-flex flex-column h-100">
+					<img src="assets/images/lightbulb.png" alt="lightbulb" class="w-50 mx-auto">
+					<h5 class="py-3 px-1"><b>Creative</b> stimulation and <b>idea</b> exploration should be central to ones daily process.</h5>
+				</div>
 			</div>
-		</div>
-		<div class="col-lg-3 col-md-6 col-sm-8 col-12 text-center">
-			<div class="h-100 d-flex flex-column h-100">
-				<img src="assets/images/individual.png" alt="individual" class="w-50 mx-auto">
-				<h5 class="py-3 px-1">Individual <b>accountibility</b> is maximized by working in small groups and benefits all parties.</h5>
+			<div class="col-lg-3 col-md-6 col-sm-8 col-12 text-center">
+				<div class="h-100 d-flex flex-column h-100">
+					<img src="assets/images/individual.png" alt="individual" class="w-50 mx-auto">
+					<h5 class="py-3 px-1">Individual <b>accountibility</b> is maximized by working in small groups and benefits all parties.</h5>
+				</div>
 			</div>
 		</div>
 	</div>
-
-	<h2 class="text-center text-md-start">Continuous Goals</h2>
-	<div id="stickies">
-		<div class="row g-0 justify-content-sm-start justify-content-center">
-		  <div class="col col-xl-2 col-lg-3 col-md-4 col-sm-6 col-9">
-		  	<div class="dummy"></div>
-		    <span class="content d-block py-2 px-3 m-md-3 m-sm-4 m-4">
-		      Master the everyday process with grace and balance.
-		    </span>
-		  </div>
-		  <div class="col col-xl-2 col-lg-3 col-md-4 col-sm-6 col-9">
-		  	<div class="dummy"></div>
-		    <span class="content d-block py-2 px-3 m-md-3 m-sm-4 m-4">
-		      Improve design skill to match development ability.
-		    </span>
-		  </div>
-		  <div class="col col-xl-2 col-lg-3 col-md-4 col-sm-6 col-9">
-		  	<div class="dummy"></div>
-		    <span class="content d-block py-2 px-3 m-md-3 m-sm-4 m-4">
-		      Practice inner peace through wisdom.
-		    </span>
-		  </div>
-		  <div class="col col-xl-2 col-lg-3 col-md-4 col-sm-6 col-9">
-		  	<div class="dummy"></div>
-		    <span class="content d-block py-2 px-3 m-md-3 m-sm-4 m-4">
-		      Actively practice creativity to reconnect.
-		    </span>
-		  </div>
-		  <div class="col col-xl-2 col-lg-3 col-md-4 col-sm-6 col-9">
-		  	<div class="dummy"></div>
-		    <span class="content d-block py-2 px-3 m-md-3 m-sm-4 m-4">
-		      Build software that doesn't cause harm.
-		    </span>
-		  </div>
-		  <div class="col col-xl-2 col-lg-3 col-md-4 col-sm-6 col-9">
-		  	<div class="dummy"></div>
-		    <span class="content d-block py-2 px-3 m-md-3 m-sm-4 m-4">
-		      Work along side like minded people
-		    </span>
-		  </div>
-		  <div class="col col-xl-2 col-lg-3 col-md-4 col-sm-6 col-9">
-		  	<div class="dummy"></div>
-		    <span class="content d-block py-2 px-3 m-md-3 m-sm-4 m-4">
-		      Continuously improve my workspace
-		    </span>
-		  </div>
-		  <div class="col col-xl-2 col-lg-3 col-md-4 col-sm-6 col-9">
-		  	<div class="dummy"></div>
-		    <span class="content d-block py-2 px-3 m-md-3 m-sm-4 m-4">
-		      Learn to take more strategic breaks.
-		    </span>
-		  </div>
-		  <div class="col col-xl-2 col-lg-3 col-md-4 col-sm-6 col-9">
-		  	<div class="dummy"></div>
-		    <span class="content d-block py-2 px-3 m-md-3 m-sm-4 m-4">
-		      Delegate with care.
-		    </span>
-		  </div>
-		  <div class="col col-xl-2 col-lg-3 col-md-4 col-sm-6 col-9">
-		  	<div class="dummy"></div>
-		    <span class="content d-block py-2 px-3 m-md-3 m-sm-4 m-4">
-		      Constantly develop my career and skillset.
-		    </span>
-		  </div>
+	
+	<div class="my-5 py-lg-4">
+		<h2 class="text-center text-md-start">Continuous Goals</h2>
+		<div id="stickies">
+			<div class="row g-0 justify-content-sm-start justify-content-center">
+			  <div class="col col-xl-2 col-lg-3 col-md-4 col-sm-6 col-9">
+			  	<div class="dummy"></div>
+			    <span class="content d-block py-2 px-3 m-md-3 m-sm-4 m-4">
+			      Master the everyday process with grace and balance.
+			    </span>
+			  </div>
+			  <div class="col col-xl-2 col-lg-3 col-md-4 col-sm-6 col-9">
+			  	<div class="dummy"></div>
+			    <span class="content d-block py-2 px-3 m-md-3 m-sm-4 m-4">
+			      Improve design skill to match development ability.
+			    </span>
+			  </div>
+			  <div class="col col-xl-2 col-lg-3 col-md-4 col-sm-6 col-9">
+			  	<div class="dummy"></div>
+			    <span class="content d-block py-2 px-3 m-md-3 m-sm-4 m-4">
+			      Practice inner peace through wisdom.
+			    </span>
+			  </div>
+			  <div class="col col-xl-2 col-lg-3 col-md-4 col-sm-6 col-9">
+			  	<div class="dummy"></div>
+			    <span class="content d-block py-2 px-3 m-md-3 m-sm-4 m-4">
+			      Actively practice creativity to reconnect.
+			    </span>
+			  </div>
+			  <div class="col col-xl-2 col-lg-3 col-md-4 col-sm-6 col-9">
+			  	<div class="dummy"></div>
+			    <span class="content d-block py-2 px-3 m-md-3 m-sm-4 m-4">
+			      Build software that doesn't cause harm.
+			    </span>
+			  </div>
+			  <div class="col col-xl-2 col-lg-3 col-md-4 col-sm-6 col-9">
+			  	<div class="dummy"></div>
+			    <span class="content d-block py-2 px-3 m-md-3 m-sm-4 m-4">
+			      Work along side like minded people
+			    </span>
+			  </div>
+			  <div class="col col-xl-2 col-lg-3 col-md-4 col-sm-6 col-9">
+			  	<div class="dummy"></div>
+			    <span class="content d-block py-2 px-3 m-md-3 m-sm-4 m-4">
+			      Continuously improve my workspace
+			    </span>
+			  </div>
+			  <div class="col col-xl-2 col-lg-3 col-md-4 col-sm-6 col-9">
+			  	<div class="dummy"></div>
+			    <span class="content d-block py-2 px-3 m-md-3 m-sm-4 m-4">
+			      Learn to take more strategic breaks.
+			    </span>
+			  </div>
+			  <div class="col col-xl-2 col-lg-3 col-md-4 col-sm-6 col-9">
+			  	<div class="dummy"></div>
+			    <span class="content d-block py-2 px-3 m-md-3 m-sm-4 m-4">
+			      Delegate with care.
+			    </span>
+			  </div>
+			  <div class="col col-xl-2 col-lg-3 col-md-4 col-sm-6 col-9">
+			  	<div class="dummy"></div>
+			    <span class="content d-block py-2 px-3 m-md-3 m-sm-4 m-4">
+			      Constantly develop my career and skillset.
+			    </span>
+			  </div>
+			</div>
 		</div>
 	</div>
 
@@ -216,8 +213,9 @@ title: "About"
     about_vue = new Vue({
       el: "#about",
       data: {
-      	whos_ben_expanded: false,
-      },
+      	intro_expanded: false,
+      	whos_ben_expanded: false
+      }
     });
   });
 </script>
