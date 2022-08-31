@@ -1,0 +1,14 @@
+<div class="d-flex flex-column px-md-5 px-sm-4 px-2 bm-sidebar">
+	<h2 class="text-uppercase mt-2 mb-auto h1">{{ page.title }}</h2>
+	<a class="footer-social-button mb-2 dark" href="https://www.linkedin.com/in/{{ site.linkedin_username }}" target="_blank"><i data-feather="linkedin" class="bm-icon"></i></a>
+	<a class="footer-social-button mb-2 dark" href="https://instagram.com/{{ site.instagram_username }}" target="_blank"><i data-feather="instagram" class="bm-icon"></i></a>
+	<!-- <a class="footer-social-button mb-2 dark" href="https://twitter.com/{{ site.twitter_username }}" target="_blank"><i data-feather="twitter" class="bm-icon"></i></a> -->
+	<a class="footer-social-button mb-2 dark" href="https://github.com/{{ site.github_username }}" target="_blank"><i data-feather="github" class="bm-icon"></i></a>
+</div>
+
+<script type="text/javascript">
+	var css_root = document.querySelector(':root');
+	$(window).scroll(function(e) {
+		css_root.style.setProperty('--scroll-offset', window.scrollY + "px");
+	})
+</script>

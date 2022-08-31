@@ -1,0 +1,70 @@
+<nav id="navbar" class="navbar navbar-expand-md py-sm-4 py-3 navbar-light bg-transparent">
+  <div class="container-fluid px-md-5 px-sm-4 px-2">
+    <a class="navbar-brand" href="/">
+      <img src="assets/images/logo.svg" id="logo" alt="logo - Ben MacPherson">
+    </a>
+    <button class="btn border-0 p-0 text-black border-none text-end navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navbar">
+      <span data-feather="menu"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-menu">
+      <ul class="navbar-nav flex-grow-1 justify-content-center align-items-end mb-2 mb-md-0 text-uppercase">
+        <li class="nav-item text-center p-md-2">
+          <navdot v-if="page == '/'"></navdot>
+          <a class="nav-link" :class="{ 'active' : page == '/' }" href="/">Home</a>
+        </li>
+        <li class="nav-item text-center p-md-2">
+          <navdot v-if="page == '/about.html'"></navdot>
+          <a class="nav-link" :class="{ 'active' : page == '/about.html' }" href="about">About</a>
+        </li>
+        <li class="d-md-none nav-item p-md-2">
+          <a class="nav-link" :class="{ 'active' : page == 'contact' }" onclick="$('#contact').modal('show')">Contact</a>
+        </li>
+        <!-- <li class="nav-item p-md-2">
+          <a class="nav-link" :class="{ 'active' : page == 'about' }" href="about">About</a>
+        </li> -->
+        <!-- <li class="nav-item p-md-2">
+          <a class="nav-link" :class="{ 'active' : page == 'skills' }" href="skills">Skills</a>
+        </li> -->
+        <!-- <li class="nav-item p-md-2">
+          <a class="nav-link" :class="{ 'active' : page == 'musings' }" href="musings">Musings</a>
+        </li> -->
+        <!-- <li class="nav-item p-md-2 dropdown text-end">
+          <a class="nav-link text-nowrap" id="project-dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Portfolio <i data-feather="chevron-down" style="width: 16px; height: 16px;"></i>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-md-start" aria-labelledby="project-dropdown">  
+            <li><a class="dropdown-item pointer text-md-start text-end" href="portfolio/css-studio">CSS Studio</a></li>
+            <li><a class="dropdown-item pointer text-md-start text-end" href="portfolio/bodo-health">Bodo Health</a></li>
+            <li><a class="dropdown-item pointer text-md-start text-end" href="portfolio/bodo-studio">Bodo Studio</a></li>
+            <li><a class="dropdown-item pointer text-md-start text-end" href="portfolio/geofilter-studio">Geofilter Studio CRM</a></li>
+          </ul>
+        </li> -->
+      </ul>
+      <div class="d-md-flex d-none justify-content-md-end" id="contact-button-container">
+        <a class="btn bm-btn-outline-dark px-3" onclick="$('#contact').modal('show')">Contact</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<script type="text/javascript">
+$( document ).ready(function() {
+  var navbar = new Vue({
+    name: "navbar",
+    el: "#navbar",
+    data: {
+      page: "{{ page.url }}",
+    },
+  });
+});
+
+Vue.component('navdot', {
+  template: `
+    <div id="navdot" class="d-none d-md-inline"> 
+      <svg viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="50"/>
+      </svg>
+    </div>`
+});
+
+</script>

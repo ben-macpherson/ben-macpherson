@@ -1,0 +1,21 @@
+email: ben@benmacpherson.dev
+phone: "2042267347"
+display_phone: "+1 (204) 226-7347"
+# description: >- # eventually write this for google metadata and whatnot 
+url: "benmacpherson.dev" # the base hostname & protocol for your site, e.g. http://example.com
+instagram_username: ben.macp
+twitter_username: ben_macp
+github_username:  ben-macpherson
+linkedin_username: ben-macp
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+
+defaults:
+  - scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "default"
+      title: "Ben MacPherson"

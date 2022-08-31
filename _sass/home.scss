@@ -1,0 +1,9 @@
+#home .profile-image{
+	max-width: 450px;
+	background-position: center;
+	margin-left: auto;
+	@media (max-width: 991.98px){
+		background-position: left top;
+		margin-left: 0;
+	}
+}

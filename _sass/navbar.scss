@@ -1,0 +1,23 @@
+:root {
+	--navbar-edge-width: 175px;
+}
+
+#navdot {
+	position: absolute;	
+	top: 18px;
+	svg {
+		width: 8px;
+		height: 8px;
+		fill: var(--dark);
+		position: relative;
+		right: 4px;
+	}
+}
+
+
+#contact-button-container {
+	min-width: var(--navbar-edge-width);
+}
+#logo {
+	width: var(--navbar-edge-width);
+}

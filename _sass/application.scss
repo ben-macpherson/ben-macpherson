@@ -1,0 +1,351 @@
+:root {
+	// palette
+	--baby-powder: #FFFEFB;
+	--floral-white: #fffcf2;
+	--cultured: #F4F6F4;
+	--ash-gray: #BCC8BD;
+	--feldgrau: #4a594a;
+	--quick-silver: #A9A49E;
+	--black-olive: #403d39;
+	--dark-jungle-green: #1c211c;
+	--flame: #eb5e28;
+	// simplified 
+	--ultra-light-primary: var(--cultured);
+	--light-primary: var(--ash-gray);
+	--primary: var(--feldgrau);
+	--gray: var(--quick-silver);
+	--dark: var(--dark-jungle-green);
+	--off-white: var(--floral-white);
+	--white: var(--baby-powder);
+	--red: var(--flame);
+	//sidebar
+	--scroll-offset: 0px;
+}
+
+// ---------------- tag adjustments --------------- \\
+
+body, button {
+	font-family: 'Roboto', sans-serif;
+	letter-spacing: 0.75px;
+}
+
+body {
+	background-color: var(--off-white);
+	color: var(--dark);
+}
+
+a {
+	color: var(--dark);
+	&:hover {
+		color: var(--red)
+	}
+}
+
+small {
+	font-size: 12px;
+	font-weight: 500;
+}
+
+textarea {
+	resize: none;
+}
+
+h1 {
+	font-family: 'Lora', serif;
+	font-size: 50px;
+	@media (max-width: 575.98px){
+		font-size: 30px;
+	}
+}
+
+h2:not(.h1) {
+	a.hash {
+		color: #00000080;
+		text-decoration: none;
+	}
+}
+
+h4, h5 {
+	font-weight: 400;
+}
+
+// ---------------- bootstrap adjustments --------------- \\
+
+// list groups
+
+.list-group {
+	.list-group-item-action {
+		background-color: var(--off-white);
+		border-color: var(--light-primary);
+		&:hover {
+			background-color: var(--light-primary);
+			border-radius: 10px;
+			border: none;
+		}
+	}
+	.list-group-item-action:not(:hover) + .list-group-item-action:hover {
+		border:none;
+	}
+}
+
+.bg-contain {
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+// buttons
+.btn {
+	line-height: 2;
+	border-radius: 16px;
+	&:focus {
+		box-shadow: none;
+	}
+}
+
+.btn-link, .btn-link:hover, .btn-link:active, .btn-link:focus {
+	color: var(--primary);
+}
+
+.td-underline {
+	text-decoration: underline;
+}
+
+// modals
+.modal {
+	.modal-content {
+		@media (max-width: 575.98px){
+			border-radius: 0;
+		}
+		border-radius: 32px;
+		.modal-header {
+			padding: 32px 32px 0;
+			svg.close {
+				height: 20px;
+				width: 20px;
+				@media (max-width: 575.98px){
+					display: none;
+				}
+			}
+		}
+		.modal-body, .modal-name {
+			padding: 0 72px;
+			@media (max-width: 575.98px){
+				padding: 0 36px;
+			}
+		}
+		.modal-name {
+			display: flex;
+			min-height: 34px;
+			margin-bottom: 24px;
+		}
+		.modal-footer {
+			padding: 32px 72px;
+			@media (max-width: 575.98px){
+				padding: 32px 36px;
+			}
+		}
+	}
+}
+.modal-backdrop {
+	background-color: var(--dark);
+	&.show{
+		opacity: 0.8;
+	}
+}
+
+// nav
+.nav-link {
+	color: var(--primary) !important;
+	&.active, &:hover {
+		color: var(--dark) !important;
+	}
+}
+
+.navbar-collapse {
+	@media (max-width: 767.98px){
+		border-bottom: 1px solid var(--dark);
+	}
+}
+
+// card
+.card {
+	border-radius: 10px;
+}
+
+// ---------------- color classes --------------- \\
+
+.fill-primary {
+	fill: var(--primary);
+	background-color: var(--primary);
+}
+
+.fill-white {
+	fill: var(--white);
+	background-color: var(--white);
+}
+
+.primary {
+	color: var(--primary);
+}
+
+.dark {
+	color: var(--dark);
+}
+
+.border-dark {
+	border-color: var(--dark);
+}
+
+// ---------------- classes I add to everything I work on --------------- \\
+
+.pointer {
+	cursor: pointer !important;
+}
+
+// ---------------- BM (site) css --------------- \\
+
+.bm-sidebar {
+	border-right: 1px solid var(--dark);
+	position: sticky;
+	top: 1rem;
+	height: calc(100vh - 65.83px - 2rem + min(var(--scroll-offset), calc(65.83px)));
+	@media (min-width: 576px) {
+		height: calc(100vh - 65.83px - 3rem + min(var(--scroll-offset), calc(65.83px)));
+		top: 1.5rem;
+	}
+	@media (min-width: 768px) { height: calc(100vh - 70px - 3rem + min(var(--scroll-offset), calc(70px))); }
+	h2 {
+		writing-mode: vertical-lr;
+		transform: rotate(180deg);
+		height: fit-content;
+		margin: 0;
+		font-size: 30px;
+		line-height: 30px;
+		font-weight: 100;
+	}
+}
+
+.bm-link {
+	color: var(--feldgrau);
+	&:hover {
+		color:  var(--ash-gray);
+	}
+}
+
+.bm-icon {
+	stroke-width: 1px;
+	height: 30px;
+	width: 30px;
+	&.tiny {
+		height: 14px;
+		width: 14px;
+	}
+}
+
+.bm-giant-number {
+	display: block;
+	font-size: 65px;
+	line-height: 65px;
+}
+
+.bm-floating-input-label {
+  box-sizing: border-box;
+  padding: 0 16px;
+  position: relative;
+  width: 100%;
+  background-color: var(--ultra-light-primary);
+  border-radius: 10px;
+  cursor: text;
+  input, textarea {
+  	border: none;
+		font-size: 16px;
+		outline: 0;
+		padding: 20px 0 10px;    
+		width: 100%;
+		background: none;
+  }
+  textarea {
+  	padding-top: 0;
+		margin-top: 20px;
+  }
+  label {
+  	font-size: 16px;
+		position: absolute;
+		pointer-events: none;
+		transform-origin: top left;
+		transform: translate(0, 16px) scale(1); 
+		transition: all .1s ease-in-out;
+		color: var(--gray);
+		cursor: text;
+  }
+  &.active {
+  	background-color: var(--light-primary);
+  }
+  &.content label {
+  	transform: translate(0, 4px) scale(.75);
+		color: var(--dark);
+  }
+}
+
+//buttons
+
+.bm-icon-btn {
+	border-radius: 50%;
+	padding-left: 0;
+	padding-right: 0;
+	width: 50px;
+	height: 50px;
+	.bm-icon {
+		height: 25px;
+		width: 25px;
+	}
+}
+
+.bm-btn-primary {
+	box-shadow: 1px 2px 3px 0px var(--dark);
+	background-color: var(--primary);
+	border-color: var(--primary);
+	color: var(--white);
+	&:hover {
+		box-shadow: 3px 3px 4px 0px var(--dark);
+		color: var(--white);
+	}
+	&:target, &:active, &:focus {
+		box-shadow: inset 2px 2px 5px 0px var(--dark) !important;
+		outline: none;	
+	}
+}
+
+.bm-btn-outline-primary {
+	color: var(--primary);
+	border-color: var(--primary);
+	&:hover {
+		box-shadow: 3px 3px 4px 0px var(--dark);	
+		background-color: var(--primary);
+		color: var(--white);
+	}
+	&:target, &:active, &:focus {
+		box-shadow: inset 2px 2px 5px 0px var(--dark) !important;
+		outline: none;	
+	}
+}
+
+.bm-btn-outline-dark {
+	color: var(--dark);
+	border-color: var(--dark);
+	&:hover {
+		box-shadow: 3px 3px 4px 0px var(--dark);	
+		background-color: var(--primary);
+		border-color: var(--primary);
+		color: var(--white);
+	}
+	&:target, &:active, &:focus {
+		box-shadow: inset 2px 2px 5px 0px var(--dark) !important;
+		outline: none;	
+	}
+}
+
+.bm-snackbar {
+	font-family: 'Roboto', sans-serif;
+}
