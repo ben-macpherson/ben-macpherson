@@ -31,7 +31,7 @@
 <body class="min-vh-100">
 	<nav id="navbar" class="navbar navbar-expand-md py-sm-4 py-3 navbar-light bg-transparent">
   <div class="container-fluid px-md-5 px-sm-4 px-2">
-    <a class="navbar-brand" href="#home">
+    <a class="navbar-brand" href="/">
       <img src="assets/images/logo.svg" id="logo" alt="logo - Ben MacPherson">
     </a>
     <button class="btn border-0 p-0 text-black border-none text-end navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navbar">
@@ -105,7 +105,7 @@ Vue.component('navdot', {
 	<h2 class="text-uppercase mt-2 mb-auto h1">About</h2>
 	<a class="footer-social-button mb-2 dark" href="https://www.linkedin.com/in/ben-macp" target="_blank"><i data-feather="linkedin" class="bm-icon"></i></a>
 	<a class="footer-social-button mb-2 dark" href="https://instagram.com/ben.macp" target="_blank"><i data-feather="instagram" class="bm-icon"></i></a>
-	<a class="footer-social-button mb-2 dark" href="https://twitter.com/ben_macp" target="_blank"><i data-feather="twitter" class="bm-icon"></i></a>
+	<!-- <a class="footer-social-button mb-2 dark" href="https://twitter.com/ben_macp" target="_blank"><i data-feather="twitter" class="bm-icon"></i></a> -->
 	<a class="footer-social-button mb-2 dark" href="https://github.com/ben-macpherson" target="_blank"><i data-feather="github" class="bm-icon"></i></a>
 </div>
 
@@ -135,7 +135,7 @@ Vue.component('navdot', {
 	<div class="my-5 py-lg-4">
 		<h4 class="mb-3">Hi I'm Ben,</h4>
 		<h4 class="mb-3">I am a <b>software developer</b> based out of <b>Winnipeg</b>, Canada. I've had a lifelong facination with making stuff. Programming started out as a passion project and has turned into my career<span v-show="!intro_expanded">…</span><span v-show="intro_expanded">. I have a passion for working with <b>small teams</b> on <b>big projects</b>, this lends well to the fact that I've spent much of my career at startups.</h4>
-		<h4 v-show="intro_expanded" class="mb-3">Outside of programming, I am an avid <b>camper and hiker</b>, a casual <b>gamer</b>, I can grow a pretty incredible <b>afro</b>, I'm a <b>Fleetwood Mac</b> fan, and an aspiring <b>"maker"</b>.</span></h4>
+		<h4 v-show="intro_expanded" class="mb-3">Outside of programming, I am an avid camper and hiker, a casual gamer, I can grow a pretty incredible afro, I'm a Fleetwood Mac fan, and an aspiring <b>"maker"</b>.</span></h4>
 		<h4 v-show="intro_expanded" class="mb-3"><i>This site is a work in progress.</i> Come back soon for more!</h4>
 		<button type="button" v-show="!intro_expanded" class="btn bm-btn-primary btn-md-lg px-4" @click="intro_expanded = true">Read more…</button>
 	</div>
@@ -143,17 +143,16 @@ Vue.component('navdot', {
 	<div class="row my-5 py-lg-4">
 		<div class="col-3  d-xl-block d-none">
 			<div class="h-100 d-flex flex-column">
-				<h2>Who's Ben?</h2>
-				<img src="assets/images/bullet.png" alt="bullet" class="w-75  my-auto">
+				<h2>Who am I?</h2>
 			</div>
 		</div>
 		<div class="col-lg-6 col-xl-4 order-2 order-lg-1">
-			<h3>Soft skills</h3>
+			<h3 class="m-0">Soft skills</h3>
 			<ul>
-				<li>Fast, hands-on learner</li>
+				<li>Efficient, hands-on learner</li>
 				<li>Fast paced, logic focused programmer</li>
 				<li>Good time magement skills</li>
-				<li>Highly adaptable and competative</li>
+				<li>Highly adaptable and competitive</li>
 				<li>Self affirming</li>
 				<li>Strong, assertive communicator</li>
 				<li>Well practiced at designing elegant code</li>
@@ -162,14 +161,14 @@ Vue.component('navdot', {
 			<ul>
 				<li>Achievement oriented</li>
 				<li>Conscientious, industrious, orderly</li>
-				<li>Extraordinarily uncomforable with inactivity</li>
+				<li>Extremely uncomfortable with my own inactivity </li>
 				<li>Naturally creative</li>
 				<li>Recognizes personal growth</li>
 				
 			</ul>
 		</div>
 		<div class="col-lg-6 col-xl-4 order-1 order-lg-2">
-			<div class="d-flex justify-content-between align-items-center">
+			<div class="d-flex justify-content-between align-items-start">
 				<h3 class="m-0">Hard skills</h3>
 				<button type="button" class="btn bm-btn-outline-dark btn-sm" @click="whos_ben_expanded = true" v-show="!whos_ben_expanded">Expand</button>
 			</div>
@@ -295,14 +294,14 @@ Vue.component('navdot', {
 				  <div class="col col-xl-2 col-lg-3 col-md-4 col-sm-6 col-9">
 				  	<div class="dummy"></div>
 				    <span class="content d-block py-2 px-3 m-md-3 m-sm-4 m-4">
-				      Work along side like minded people
+				      Work alongside like minded people.
 				    </span>
 				  </div>
 				
 				  <div class="col col-xl-2 col-lg-3 col-md-4 col-sm-6 col-9">
 				  	<div class="dummy"></div>
 				    <span class="content d-block py-2 px-3 m-md-3 m-sm-4 m-4">
-				      Continuously improve my workspace
+				      Continuously improve my workspace.
 				    </span>
 				  </div>
 				
