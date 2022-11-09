@@ -80,7 +80,7 @@ h4, h5 { font-weight: 400; }
 
 .pointer { cursor: pointer !important; }
 
-.bm-sidebar { border-right: 1px solid var(--dark); position: sticky; top: 1rem; height: calc(100vh - 65.83px - 2rem + min(var(--scroll-offset), calc(65.83px))); }
+.bm-sidebar { border-right: 1px solid var(--dark); top: 1rem; height: calc(100vh - 65.83px - 2rem + min(var(--scroll-offset), calc(65.83px))); }
 
 @media (min-width: 576px) { .bm-sidebar { height: calc(100vh - 65.83px - 3rem + min(var(--scroll-offset), calc(65.83px))); top: 1.5rem; } }
 

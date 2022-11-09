@@ -207,7 +207,6 @@ h4, h5 {
 
 .bm-sidebar {
 	border-right: 1px solid var(--dark);
-	position: sticky;
 	top: 1rem;
 	height: calc(100vh - 65.83px - 2rem + min(var(--scroll-offset), calc(65.83px)));
 	@media (min-width: 576px) {
